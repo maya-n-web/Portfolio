@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="title">Portfolio</h1>
+      <div class="title-line"></div>
+      <div class="name-block">
+        <span class="name">Maya Nishii</span>
+        <div class="name-underline"></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <nav class="nav-links">
+        <!-- Contactボタンを下部のContactセクションへ飛ばす内部リンクに変更 -->
+        <a href="#contact" class="nav-item">
+          <span>Contact</span>
+          <span class="nav-underline"></span>
+        </a>
+        <a href="works.html" class="nav-item">
+          <span>Works</span>
+          <span class="nav-underline"></span>
+        </a>
+        <a href="bio.html" class="nav-item">
+          <span>Bio</span>
+          <span class="nav-underline"></span>
+        </a>
+      </nav>
+    </main>
+
+
+
+
+
+
+
+
+
+
+     <h2 class="contact" id="contact">Contact</h2>
+
+     <form 
+     class="contact-form"
+     action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse" 
+     method="POST" 
+     target="hidden_iframe" >
+
+     <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="entry.1720009579" required>
+    </div>
+
+      <div class="form-row">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="entry.664999081" required>
+      </div>
+    
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="entry.1020937472" required></textarea>
+      </div>
+    
+      <button type="submit">Submit</button>
+    </form>
+    
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('送信が完了しました！');}"></iframe>
+    
+    <script>
+      let submitted = false;
+      document.getElementById('contact-form').onsubmit = function() {
+        submitted = true;
+      };
+    </script>
+    </form>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", Meiryo, sans-serif;
+  color: #000;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 32px 40px;
+  box-sizing: border-box;
+}
+
+/* 上部レイアウト */
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 64px;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.title-line {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 52%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* 角度が付いた線の表現（簡易的） */
+.title-line::after {
+  content: "";
+  position: absolute;
+  right: -48px;
+  top: -50px;
+  width: 48px;
+  height: 50px;
+  border-bottom: 2px solid #000;
+  border-right: 10px solid #000;
+  transform-origin: right bottom;
+  transform: skewX(-35deg);
+}
+
+.name-block {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.name {
+  position: relative;
+  right: 200px;
+  font-size: 24px;
+  letter-spacing: 0.06em;
+}
+
+.name-underline {
+  position: relative;
+  right: 200px;
+  margin-top: 4px;
+  width: 160px;
+  height: 2px;
+  background-color: #000;
+}
+
+/* 下部ナビゲーション */
+
+.main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: calc(100vh - 160px);
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  gap: 140px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}
+
+.nav-underline {
+  display: block;
+  margin-top: 6px;
+  width: 120px;
+  height: 2px;
+  background-color: #000;
+}
+
+.nav-note {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.contact-mail-wrapper {
+  margin-bottom: 24px;
+}
+
+.contact-mail-link {
+  font-size: 18px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.contact-mail-link:hover {
+  opacity: 0.7;
+}
+
+/* フォーム */
+
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  background-color: #ffffffcc;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-row label {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.form-submit-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 28px;
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-submit-btn:hover {
+  opacity: 0.8;
+}
+
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #005fa3;
+}
+
+#contact { 
+  text-align: center; 
+}
+.contact { 
+  margin-top: 1000px; 
+  text-align: center; 
+}

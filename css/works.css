@@ -1,0 +1,101 @@
+/* 背景画像のURL部分は ☆ にしてあります */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", Meiryo, sans-serif;
+  color: #000;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+
+
+/* 左側テキストカード */
+
+.works-text-card {
+  background-color: #fff;
+  padding: 32px 100px;
+  max-width: 1000px;
+  margin-bottom:150px;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+
+.meta-row {
+  display: flex;
+  gap: 60px;
+  margin-top: 8px;
+}
+
+
+
+/* 右側ロゴ画像 */
+.logo {
+  display: block;
+  width: 300px;   
+  height: 300px; 
+  object-fit: contain;  
+}
+
+
+.works-image-card {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 24px 28px;
+  box-sizing: border-box;
+}
+
+.works-main {
+  display: flex;
+  align-items: flex-start;   
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.works-image-card {
+  margin-left: auto;         
+}
+
+
+/* フッターラベル */
+
+.works-footer {
+  text-align: right;
+  margin-top: 30px;
+}
+.works-footer-second {
+  position: relative;
+  top: -150px; 
+}
+.works-subtitle-b{
+  margin-top: 1000px; 
+}
+
+.back-link {
+  display: block;
+  margin-top: 100px;          
+}
+.back-link {
+  position: fixed;
+  left: 60px;      
+  bottom: 40px;    
+}
