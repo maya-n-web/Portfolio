@@ -72,12 +72,142 @@ body {
 }
 
 /* 本文＋写真 */
+.bio-about {
+  margin-top: 8px;
+}
+
+.bio-about__title {
+  margin: 0 0 14px;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.bio-about__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
 
 .bio-main {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
   gap: 40px;
+}
+
+/* Skills */
+.skills {
+  margin-top: 48px;
+}
+
+.skills__title {
+  margin: 0 0 12px;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+.skills-tabs {
+  border-top: 1px solid #000;
+  padding-top: 12px;
+}
+
+.skills-tabs__radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skills-tabs__tab {
+  display: inline-block;
+  margin-right: 18px;
+  padding: 8px 0;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  opacity: 0.7;
+  border-bottom: 2px solid transparent;
+}
+
+#skills-all:checked ~ label[for="skills-all"],
+#skills-lang:checked ~ label[for="skills-lang"],
+#skills-fwk:checked ~ label[for="skills-fwk"],
+#skills-tool:checked ~ label[for="skills-tool"] {
+  opacity: 1;
+  border-bottom-color: #000;
+}
+
+.skills-tabs__panels {
+  margin-top: 18px;
+}
+
+.skills-panel {
+  display: none;
+}
+
+#skills-all:checked ~ .skills-tabs__panels .skills-panel--all,
+#skills-lang:checked ~ .skills-tabs__panels .skills-panel--lang,
+#skills-fwk:checked ~ .skills-tabs__panels .skills-panel--fwk,
+#skills-tool:checked ~ .skills-tabs__panels .skills-panel--tool {
+  display: block;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.06);
+}
+
+.skill-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #111;
+  background: #f2f2f2;
+  margin-bottom: 10px;
+}
+
+.skill-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.skill-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.skill-card__stars {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #9a9a9a;
+}
+
+.skill-card[data-level="4"] .skill-card__stars,
+.skill-card[data-level="5"] .skill-card__stars,
+.skill-card[data-level="3"] .skill-card__stars {
+  color: #666;
 }
 
 /* 左側の白いカード */
@@ -88,6 +218,12 @@ body {
   max-width: 620px;
   box-sizing: border-box;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.bio-text-card__title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
 }
 
 .bio-text-card p {

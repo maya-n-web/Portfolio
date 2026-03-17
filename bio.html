@@ -3,6 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <title>BIO - Portfolio</title>
+  <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/bio.css">  
 </head>
 
@@ -23,23 +24,153 @@
       <p class="bio-name">Maya Nishii</p>
     </header>
 
-    <main class="bio-main">
-      <section class="bio-text-card">
-        <p>
-          短大卒業後、正社員として4年間接客業に従事。<br>
-          その後カナダへ数年間移住。コロナ化での現地での生きた情報を<br>
-          日本に発信するために開設した HP 運営をきっかけに、WEB デザ<br>
-          インやシステム管理に興味を持つ。帰国後は Web エンジニアを目<br>
-          指すことを決意。4 ヶ月間スクールで Web デザインやプログラミ<br>
-          ングについて学び、現在は転職活動をしています。
-        </p>
-      </section>
+    <section class="bio-about" aria-label="About">
+      <h2 class="bio-about__title">わたしについて</h2>
 
-      <aside class="bio-photo-wrapper">
-        
+      <main class="bio-main">
+        <section class="bio-text-card" aria-label="Career">
+          <h3 class="bio-text-card__title">経歴</h3>
+          <p>
+            短大卒業後、正社員として4年間接客業に従事。<br>
+            その後カナダへ数年間移住。コロナ化での現地での生きた情報を<br>
+            日本に発信するために開設した HP 運営をきっかけに、WEB デザ<br>
+            インやシステム管理に興味を持つ。帰国後は Web エンジニアを目<br>
+            指すことを決意。4 ヶ月間スクールで Web デザインやプログラミ<br>
+            ングについて学び、現在は転職活動をしています。
+          </p>
+        </section>
         <img src="☆" alt="Maya Nishii" class="bio-photo">
-      </aside>
       </main>
+    </section>
+
+    <section class="skills" aria-label="Skills">
+      <h2 class="skills__title">SKILL</h2>
+
+      <div class="skills-tabs">
+        <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-all" checked>
+        <label class="skills-tabs__tab" for="skills-all">ALL</label>
+
+        <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-lang">
+        <label class="skills-tabs__tab" for="skills-lang">LANG</label>
+
+        <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-fwk">
+        <label class="skills-tabs__tab" for="skills-fwk">FWK</label>
+
+        <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-tool">
+        <label class="skills-tabs__tab" for="skills-tool">TOOL</label>
+
+        <div class="skills-tabs__panels">
+          <div class="skills-panel skills-panel--all">
+            <div class="skills-grid">
+              <article class="skill-card" data-level="3" data-cat="lang">
+                <div class="skill-card__icon"><img src="images/html-icon.svg" alt="HTML"></div>
+                <div class="skill-card__name">HTML</div>
+                <div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div>
+              </article>
+
+              <article class="skill-card" data-level="3" data-cat="lang">
+                <div class="skill-card__icon"><img src="images/css3%201.svg" alt="CSS"></div>
+                <div class="skill-card__name">CSS</div>
+                <div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div>
+              </article>
+              <article class="skill-card" data-level="2" data-cat="lang">
+                <div class="skill-card__icon"><img src="images/javascript-icon%201.svg" alt="JavaScript"></div>
+                <div class="skill-card__name">JavaScript</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div>
+              </article>
+              
+              <article class="skill-card" data-level="2" data-cat="lang">
+                <div class="skill-card__icon"><img src="images/php-icon%201.svg" alt="PHP"></div>
+                <div class="skill-card__name">PHP</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div>
+              </article>
+              <article class="skill-card" data-level="2" data-cat="lang">
+                <div class="skill-card__icon"><img src="images/sql-icon%201.svg" alt="SQL"></div>
+                <div class="skill-card__name">SQL</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div>
+              </article>
+
+              <article class="skill-card" data-level="2" data-cat="fwk">
+                <div class="skill-card__icon" aria-hidden="true">R</div>
+                <div class="skill-card__name">React</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div>
+              </article>
+              <article class="skill-card" data-level="1" data-cat="fwk">
+                <div class="skill-card__icon" aria-hidden="true">N</div>
+                <div class="skill-card__name">Node.js</div>
+                <div class="skill-card__stars" aria-label="1 out of 5">★☆☆☆☆</div>
+              </article>
+
+              <article class="skill-card" data-level="3" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/github-icon%201.svg" alt="Git / GitHub"></div>
+                <div class="skill-card__name">GitHub</div>
+                <div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div>
+              </article>
+              <article class="skill-card" data-level="3" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/Figma-logo%201.svg" alt="Figma"></div>
+                <div class="skill-card__name">Figma</div>
+                <div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div>
+              </article>
+              <article class="skill-card" data-level="3" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/illustrator-icon%201.svg" alt="Illustrator"></div>
+                <div class="skill-card__name">Illustrator</div>
+                <div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div>
+              </article>
+              <article class="skill-card" data-level="2" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/photoshop-icon%201.svg" alt="Photoshop"></div>
+                <div class="skill-card__name">Photoshop</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div>
+              </article>
+              <article class="skill-card" data-level="2" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/cursor-icon%201.svg" alt="Cursor"></div>
+                <div class="skill-card__name">Cursor</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div>
+              </article>
+              <article class="skill-card" data-level="2" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/googleoffice-icon%201.svg" alt="Google Workplace"></div>
+                <div class="skill-card__name">Google Workplace</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★★★☆</div>
+              </article>
+              <article class="skill-card" data-level="2" data-cat="tool">
+                <div class="skill-card__icon"><img src="images/wps-icon%201.svg" alt="WPS"></div>
+                <div class="skill-card__name">WPS</div>
+                <div class="skill-card__stars" aria-label="2 out of 5">★★★★☆</div>
+              </article>
+            </div>
+          </div>
+
+          <div class="skills-panel skills-panel--lang">
+            <div class="skills-grid">
+              <article class="skill-card" data-level="3"><div class="skill-card__icon"><img src="images/html-icon.svg" alt="HTML"></div><div class="skill-card__name">HTML</div><div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div></article>
+              <article class="skill-card" data-level="3"><div class="skill-card__icon"><img src="images/css3%201.svg" alt="CSS"></div><div class="skill-card__name">CSS</div><div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/javascript-icon%201.svg" alt="JavaScript"></div><div class="skill-card__name">JavaScript</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon" aria-hidden="true">TS</div><div class="skill-card__name">TypeScript</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/php-icon%201.svg" alt="PHP"></div><div class="skill-card__name">PHP</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/sql-icon%201.svg" alt="SQL"></div><div class="skill-card__name">SQL</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+            </div>
+          </div>
+
+          <div class="skills-panel skills-panel--fwk">
+            <div class="skills-grid">
+              <article class="skill-card" data-level="2"><div class="skill-card__icon" aria-hidden="true">R</div><div class="skill-card__name">React</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="1"><div class="skill-card__icon" aria-hidden="true">N</div><div class="skill-card__name">Next.js</div><div class="skill-card__stars" aria-label="1 out of 5">★☆☆☆☆</div></article>
+            </div>
+          </div>
+
+          <div class="skills-panel skills-panel--tool">
+            <div class="skills-grid">
+              <article class="skill-card" data-level="3"><div class="skill-card__icon"><img src="images/github-icon%201.svg" alt="Git / GitHub"></div><div class="skill-card__name">Git / GitHub</div><div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div></article>
+              <article class="skill-card" data-level="3"><div class="skill-card__icon"><img src="images/Figma-logo%201.svg" alt="Figma"></div><div class="skill-card__name">Figma</div><div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div></article>
+              <article class="skill-card" data-level="3"><div class="skill-card__icon"><img src="images/illustrator-icon%201.svg" alt="Illustrator"></div><div class="skill-card__name">Illustrator</div><div class="skill-card__stars" aria-label="3 out of 5">★★★☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/photoshop-icon%201.svg" alt="Photoshop"></div><div class="skill-card__name">Photoshop</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/cursor-icon%201.svg" alt="Cursor"></div><div class="skill-card__name">Cursor</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/googleoffice-icon%201.svg" alt="Google Workplace"></div><div class="skill-card__name">Google Workplace</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+              <article class="skill-card" data-level="2"><div class="skill-card__icon"><img src="images/wps-icon%201.svg" alt="WPS"></div><div class="skill-card__name">WPS</div><div class="skill-card__stars" aria-label="2 out of 5">★★☆☆☆</div></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
     
     <footer>
