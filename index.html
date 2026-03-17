@@ -54,6 +54,7 @@
      <h2 class="contact" id="contact">Contact</h2>
 
      <form 
+     id="contact-form"
      class="contact-form"
      action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse" 
      method="POST" 
@@ -77,16 +78,14 @@
       <button type="submit">Submit</button>
     </form>
     
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('送信が完了しました！');}"></iframe>
-    
     <script>
-      let submitted = false;
+      var submitted = false;
       document.getElementById('contact-form').onsubmit = function() {
         submitted = true;
       };
-      </script>
-    </form>
-    </section>
+    </script>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('送信が完了しました！');}"></iframe>
   </div>
 
   <footer>
