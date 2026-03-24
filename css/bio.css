@@ -97,8 +97,16 @@ body {
 .bio-main {
   display: flex;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 0 auto; 
   gap: 40px;
+}
+
+.bio-photo {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 24px 28px;
+  box-sizing: border-box;
 }
 
 /* Skills */
@@ -245,12 +253,6 @@ body {
   object-fit: cover;
   background-color: #fff;
   border: 2px solid #000;
-}
-
-.back-link {
-  position: fixed;
-  left: 60px;     
-  bottom: 40px;  
 }
 
 footer {

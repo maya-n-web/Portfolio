@@ -30,71 +30,72 @@
       </div>
     </header>
 
-    <main class="main">
-      <nav class="nav-links">
-        <a href="#contact" class="nav-item">
-          <span>Contact</span>
-          <span class="nav-underline"></span>
-        </a>
-        <a href="works.html" class="nav-item">
-          <span>Works</span>
-          <span class="nav-underline"></span>
-        </a>
-        <a href="bio.html" class="nav-item">
-          <span>Bio</span>
-          <span class="nav-underline"></span>
-        </a>
-      </nav>
-    </main>
-
-
-
-
-
-
-
-
-
-
-    <h2 class="contact" id="contact">Contact</h2>
-
-    <form id="contact-form" class="contact-form"
-      action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
-      method="POST" target="hidden_iframe">
-
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="entry.1720009579" required>
+    <main>
+      <div class="main">
+        <nav class="nav-links">
+          <a href="#contact" class="nav-item">
+            <span>Contact</span>
+            <span class="nav-underline"></span>
+          </a>
+          <a href="works.html" class="nav-item">
+            <span>Works</span>
+            <span class="nav-underline"></span>
+          </a>
+          <a href="bio.html" class="nav-item">
+            <span>Bio</span>
+            <span class="nav-underline"></span>
+          </a>
+        </nav>
       </div>
 
-      <div class="form-row">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="entry.664999081" required>
-      </div>
 
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="entry.1020937472" required></textarea>
-      </div>
 
-      <button type="submit">Submit</button>
-    </form>
 
-    <script>
-      var submitted = false;
-      document.getElementById('contact-form').onsubmit = function () {
-        submitted = true;
-      };
-    </script>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-      onload="if(submitted){alert('送信が完了しました！');}"></iframe>
+
+
+
+
+
+      <h2 class="contact" id="contact">Contact</h2>
+
+      <form id="contact-form" class="contact-form"
+        action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
+        method="POST" target="hidden_iframe">
+
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="entry.1720009579" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="entry.664999081" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="entry.1020937472" required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <script>
+        var submitted = false;
+        document.getElementById('contact-form').onsubmit = function () {
+          submitted = true;
+        };
+      </script>
+
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+        onload="if(submitted){alert('送信が完了しました！');}"></iframe>
   </div>
+  </main>
 
   <footer>
     <small id="year">&copy; Maya Nishii All Rights Reserved.</small>
   </footer>
-
 </body>
 
 </html>
