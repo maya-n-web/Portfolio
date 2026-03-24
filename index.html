@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body>
   <div class="wrapper">
     <header class="header">
       <h1 class="title">Portfolio</h1>
       <div class="title-line"></div>
+
       <nav class="global-nav" aria-label="Global">
         <a class="global-nav__link" href="index.html" aria-current="page">Home</a>
         <a class="global-nav__link" href="works.html">Works</a>
         <a class="global-nav__link" href="bio.html">Bio</a>
         <a class="global-nav__link" href="#contact">Contact</a>
       </nav>
+
       <div class="name-block">
         <span class="name">Maya Nishii</span>
         <div class="name-underline"></div>
@@ -54,46 +56,45 @@
 
 
 
-     <h2 class="contact" id="contact">Contact</h2>
+    <h2 class="contact" id="contact">Contact</h2>
 
-     <form 
-     id="contact-form"
-     class="contact-form"
-     action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse" 
-     method="POST" 
-     target="hidden_iframe" >
+    <form id="contact-form" class="contact-form"
+      action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
+      method="POST" target="hidden_iframe">
 
-     <div class="form-row">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="entry.1720009579" required>
-    </div>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="entry.1720009579" required>
+      </div>
 
       <div class="form-row">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="entry.664999081" required>
       </div>
-    
+
       <div class="form-row">
         <label for="message">Message</label>
         <textarea id="message" name="entry.1020937472" required></textarea>
       </div>
-    
+
       <button type="submit">Submit</button>
     </form>
-    
+
     <script>
       var submitted = false;
-      document.getElementById('contact-form').onsubmit = function() {
+      document.getElementById('contact-form').onsubmit = function () {
         submitted = true;
       };
     </script>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('送信が完了しました！');}"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+      onload="if(submitted){alert('送信が完了しました！');}"></iframe>
   </div>
 
   <footer>
-    <small id="year" >&copy; Maya Nishii All Rights Reserved.</small>
+    <small id="year">&copy; Maya Nishii All Rights Reserved.</small>
   </footer>
-  
-  </body>
+
+</body>
+
 </html>
