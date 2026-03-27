@@ -1,8 +1,10 @@
+/* ==========================================================================
+   1. 共通設定 (Common)
+   ========================================================================== */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Yu Gothic", Meiryo, sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   color: #000;
   background-image: url("../images/background.png");
   background-size: cover;
@@ -12,24 +14,26 @@ body {
 
 .wrapper {
   min-height: 100vh;
-  padding: 32px 40px;
+  padding: 40px 60px; /* 広めのパディングに統一 */
   box-sizing: border-box;
 }
 
-/* 上部レイアウト */
+footer {
+  text-align: center;
+}
 
+/* ==========================================================================
+   2. ヘッダー・ナビゲーション (Header / Nav)
+   ========================================================================== */
 .header {
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .global-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -49,6 +53,7 @@ body {
   border-bottom-color: currentColor;
 }
 
+/* トップページ専用タイトル装飾 */
 .title {
   font-size: 64px;
   letter-spacing: 0.05em;
@@ -64,7 +69,6 @@ body {
   background-color: #000;
 }
 
-/* 角度が付いた線の表現（簡易的） */
 .title-line::after {
   content: "";
   position: absolute;
@@ -78,85 +82,121 @@ body {
   transform: skewX(-35deg);
 }
 
-.name-block {
+/* ==========================================================================
+   3. 自己紹介セクション (Bio)
+   ========================================================================== */
+.bio-main {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.bio-title {
+  margin: 0;
+  font-size: 80px;
+  letter-spacing: 0.08em;
+}
+
+.bio-text-card {
+  background-color: #fff;
+  padding: 32px 40px;
+  max-width: 620px;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.bio-photo {
+  display: block;
+  width: 260px;
+  height: auto;
+  object-fit: cover;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+/* スキルタブ */
+.skills-tabs__radio {
   position: absolute;
-  right: 0;
-  bottom: -8px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skills-tabs__tab {
+  display: inline-block;
+  margin-right: 18px;
+  padding: 8px 0;
+  font-size: 13px;
+  cursor: pointer;
+  opacity: 0.7;
+  border-bottom: 2px solid transparent;
+}
+
+#skills-all:checked ~ label[for="skills-all"],
+#skills-lang:checked ~ label[for="skills-lang"],
+#skills-fwk:checked ~ label[for="skills-fwk"],
+#skills-tool:checked ~ label[for="skills-tool"] {
+  opacity: 1;
+  border-bottom-color: #000;
+}
+
+.skills-panel { display: none; }
+#skills-all:checked ~ .skills-tabs__panels .skills-panel--all,
+#skills-lang:checked ~ .skills-tabs__panels .skills-panel--lang,
+#skills-fwk:checked ~ .skills-tabs__panels .skills-panel--fwk,
+#skills-tool:checked ~ .skills-tabs__panels .skills-panel--tool {
+  display: block;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* ==========================================================================
+   4. 制作実績セクション (Works)
+   ========================================================================== */
+.works-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.works-text-card {
+  background-color: #fff;
+  padding: 32px 100px;
+  max-width: 1000px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
 }
 
-.name {
-  position: relative;
-  right: 200px;
-  font-size: 24px;
-  letter-spacing: 0.06em;
+.works-image-card {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 24px 28px;
+  margin-left: auto;
 }
 
-.name-underline {
-  position: relative;
-  right: 200px;
-  margin-top: 4px;
-  width: 160px;
-  height: 2px;
-  background-color: #000;
-}
-
-/* 下部ナビゲーション */
-
-.main {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: calc(100vh - 160px);
-  box-sizing: border-box;
-}
-
-.nav-links {
-  display: flex;
-  gap: 140px;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-.nav-item {
-  position: relative;
-  text-decoration: none;
-  color: #000;
-  font-size: 22px;
-  letter-spacing: 0.06em;
-}
-
-.nav-underline {
+.logo {
   display: block;
-  margin-top: 6px;
-  width: 120px;
-  height: 2px;
-  background-color: #000;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
 }
 
-.nav-note {
-  display: block;
-  margin-top: 6px;
-  font-size: 12px;
+/* ==========================================================================
+   5. お問い合わせセクション (Contact)
+   ========================================================================== */
+#contact, .contact {
+  text-align: center;
 }
 
-.contact-mail-wrapper {
-  margin-bottom: 24px;
-}
-
-.contact-mail-link {
-  font-size: 18px;
-  color: #000;
-  text-decoration: underline;
-}
-
-.contact-mail-link:hover {
-  opacity: 0.7;
-}
-
-/* フォーム */
+.contact { margin-top: 100px; } /* 1000pxから現実的な数値へ調整が必要な場合はここ */
 
 .contact-form {
   max-width: 480px;
@@ -165,70 +205,21 @@ body {
   background-color: #ffffffcc;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
-.form-row {
+.form-group, .form-row {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
   text-align: left;
 }
 
-.form-row label {
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-
-.form-row input,
-.form-row textarea {
-  padding: 8px 10px;
-  font-size: 14px;
-  border: 1px solid #999;
-  border-radius: 3px;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  border-color: #333;
-}
-
-.form-submit-btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 10px 28px;
-  font-size: 15px;
-  border: none;
-  border-radius: 3px;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-.form-submit-btn:hover {
-  opacity: 0.8;
-}
-
-.contact-form {
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 16px;
-}
-
 .form-group label {
-  display: block;
-  margin-bottom: 6px;
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
   width: 100%;
   padding: 8px 10px;
   border: 1px solid #ccc;
@@ -236,10 +227,10 @@ body {
   box-sizing: border-box;
 }
 
-button[type="submit"] {
+button[type="submit"], .form-submit-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #0078d4;
+  background: #000;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -247,18 +238,5 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: #005fa3;
-}
-
-#contact { 
-  text-align: center; 
-}
-
-.contact { 
-  margin-top: 1000px; 
-  text-align: center; 
-}
-
-footer {
-  text-align: center;
+  background: #333;
 }
