@@ -4,7 +4,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   color: #000;
   background-image: url("../images/background.png");
   background-size: cover;
@@ -14,8 +13,7 @@ body {
 
 .wrapper {
   min-height: 100vh;
-  padding: 40px 60px; /* 広めのパディングに統一 */
-  box-sizing: border-box;
+  padding: 40px 60px;
 }
 
 footer {
@@ -33,12 +31,23 @@ footer {
   margin-bottom: 40px;
 }
 
+.nav-links {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 150px;
+  margin-top: 350px;
+  margin-bottom: 400px;
+  display: flex;
+  gap: 350px;
+}
+
 .global-nav {
   display: flex;
   gap: 20px;
   align-items: center;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 0.06em;
+  margin-right: 10px;
 }
 
 .global-nav__link {
@@ -64,7 +73,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: -8px;
-  width: 52%;
+  width: 30%;
   height: 2px;
   background-color: #000;
 }
@@ -80,6 +89,18 @@ footer {
   border-right: 10px solid #000;
   transform-origin: right bottom;
   transform: skewX(-35deg);
+}
+
+.name-block {
+  position: relative;
+  font-size: 48px;
+  position: absolute;
+  left: 600px;
+  right: 300px;
+  top: 30px;
+  bottom: 300px;
+  width: 30%;
+  height: 2px;
 }
 
 /* ==========================================================================
@@ -133,19 +154,22 @@ footer {
   border-bottom: 2px solid transparent;
 }
 
-#skills-all:checked ~ label[for="skills-all"],
-#skills-lang:checked ~ label[for="skills-lang"],
-#skills-fwk:checked ~ label[for="skills-fwk"],
-#skills-tool:checked ~ label[for="skills-tool"] {
+#skills-all:checked~label[for="skills-all"],
+#skills-lang:checked~label[for="skills-lang"],
+#skills-fwk:checked~label[for="skills-fwk"],
+#skills-tool:checked~label[for="skills-tool"] {
   opacity: 1;
   border-bottom-color: #000;
 }
 
-.skills-panel { display: none; }
-#skills-all:checked ~ .skills-tabs__panels .skills-panel--all,
-#skills-lang:checked ~ .skills-tabs__panels .skills-panel--lang,
-#skills-fwk:checked ~ .skills-tabs__panels .skills-panel--fwk,
-#skills-tool:checked ~ .skills-tabs__panels .skills-panel--tool {
+.skills-panel {
+  display: none;
+}
+
+#skills-all:checked~.skills-tabs__panels .skills-panel--all,
+#skills-lang:checked~.skills-tabs__panels .skills-panel--lang,
+#skills-fwk:checked~.skills-tabs__panels .skills-panel--fwk,
+#skills-tool:checked~.skills-tabs__panels .skills-panel--tool {
   display: block;
 }
 
@@ -192,11 +216,14 @@ footer {
 /* ==========================================================================
    5. お問い合わせセクション (Contact)
    ========================================================================== */
-#contact, .contact {
+#contact,
+.contact {
   text-align: center;
 }
 
-.contact { margin-top: 100px; } /* 1000pxから現実的な数値へ調整が必要な場合はここ */
+.contact {
+  margin-top: 100px;
+}
 
 .contact-form {
   max-width: 480px;
@@ -207,7 +234,8 @@ footer {
   border-radius: 4px;
 }
 
-.form-group, .form-row {
+.form-group,
+.form-row {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
@@ -219,7 +247,8 @@ footer {
   margin-bottom: 6px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 8px 10px;
   border: 1px solid #ccc;
@@ -227,7 +256,8 @@ footer {
   box-sizing: border-box;
 }
 
-button[type="submit"], .form-submit-btn {
+button[type="submit"],
+.form-submit-btn {
   display: inline-block;
   padding: 10px 20px;
   background: #000;
