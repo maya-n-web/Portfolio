@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リセットCSS 解説とデモ</title>
+
+    <!-- 
+      【リセットCSS】
+      今回は例として、歴史的によく使われてきた「Eric Meyer's Reset CSS」をベースにしたものを定義しています。
+      ※初期状態では media="not all" を指定して適用されないようにしています。
+    -->
+    <style id="reset-css" media="not all">
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+           v2.0 | 20110126
+           License: none (public domain)
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+
+    <!-- 
+      【レイアウト用CSS】
+      ※リセットCSSをONにしてもページが崩れすぎないよう、IDセレクタ等の強い詳細度で最低限の余白を設定しています。
+    -->
+    <style id="layout-css">
+        body {
+            background-color: #f9fafb;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            color: #333;
+        }
+
+        #app-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header-panel {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-bottom: 2px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .header-panel p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        #toggle-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        #toggle-btn:hover {
+            background-color: #2563eb;
+        }
+
+        #toggle-btn.active {
+            background-color: #ef4444;
+        }
+
+        #toggle-btn.active:hover {
+            background-color: #dc2828;
+        }
+
+        .demo-section {
+            background: white;
+            padding: 30px;
+            border: 1px dashed #cbd5e1;
+            margin-top: 40px;
+        }
+
+        .demo-section-title {
+            color: #64748b;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- コントロールパネル -->
+    <div class="header-panel">
+        <p>状態: <span id="status-text">デフォルト（リセット無効）</span></p>
+        <button id="toggle-btn" onclick="toggleResetCSS()">リセットCSSをONにする</button>
+    </div>
+
+    <div id="app-wrapper">
+        <!-- 解説セクション -->
+        <h1>WebデザインにおけるリセットCSSとは？</h1>
+        <p>
+            リセットCSS（Reset CSS）とは、ブラウザがデフォルトで持っているスタイル（ユーザーエージェントスタイルシート）を打ち消し、
+            <strong>ブラウザ間の表示の差異をなくすためのCSS</strong>です。
+        </p>
+
+        <h2>なぜリセットCSSが必要なのか？</h2>
+        <p>
+            Chrome、Safari、Firefox、Edgeなど、各ブラウザはあらかじめHTML要素に対して独自のスタイル（余白、文字サイズ、リストの黒丸など）を持っています。
+            これらが原因で、「Chromeでは綺麗に見えるのに、Safariではズレてしまう」といった現象が起きます。
+            リセットCSSを読み込むことで、これらのデフォルトスタイルを一旦「ゼロ」または「統一」し、ゼロベースでデザインを構築できるようになります。
+        </p>
+
+        <h2>代表的なリセットの手法</h2>
+        <ul>
+            <li><strong>ハードリセット（例: Eric Meyer's Reset CSS）</strong>：あらゆる要素のmargin、paddingを0にし、フォントサイズもすべて均一にする強力なリセット。</li>
+            <li><strong>ノーマライズ（例: Normalize.css）</strong>：デフォルトのスタイルを活かしつつ、ブラウザ間の差異だけを埋めるアプローチ。</li>
+            <li><strong>サニタイズ（例: sanitize.css）</strong>：ノーマライズからの拡張版。</li>
+            <li><strong>モダンリセット（例: destyle.css など）</strong>：最近のWeb開発事情に合わせ、box-sizingなどを適切に設定しつつスタイルをリセットするもの。</li>
+        </ul>
+
+        <!-- ここから表示テスト用のHTML要素 -->
+        <div class="demo-section">
+            <div class="demo-section-title">▼ 以下の要素でリセットCSSの効果を確認してください ▼</div>
+
+            <h1>見出し要素（h1）</h1>
+            <h2>見出し要素（h2）</h2>
+            <h3>見出し要素（h3）</h3>
+
+            <p>
+                これは段落（pタグ）です。デフォルトでは段落の上下には余白（マージン）が設定されています。
+                また、<a href="#">リンクテキスト（aタグ）</a>は通常青色で下線が引かれます。
+            </p>
+
+            <blockquote>
+                これは引用文（blockquoteタグ）です。デフォルトでは左右にインデント（余白）が設けられます。
+            </blockquote>
+
+            <h3>リスト要素のテスト</h3>
+            <ul>
+                <li>順序なしリスト（ul）の項目1</li>
+                <li>順序なしリスト（ul）の項目2
+                    <ul>
+                        <li>ネストされたリストA</li>
+                        <li>ネストされたリストB</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ol>
+                <li>順序ありリスト（ol）の項目1</li>
+                <li>順序ありリスト（ol）の項目2</li>
+            </ol>
+
+            <h3>テーブル要素のテスト</h3>
+            <table border="1">
+                <caption>テーブルのキャプション</caption>
+                <thead>
+                    <tr>
+                        <th>見出しセル（th）</th>
+                        <th>見出しセル（th）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>データセル（td）</td>
+                        <td>データセル（td）</td>
+                    </tr>
+                    <tr>
+                        <td>データセル（td）</td>
+                        <td>データセル（td）</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>フォーム要素のテスト</h3>
+            <form action="#">
+                <fieldset>
+                    <legend>フィールドセット（legend）</legend>
+                    <label for="name">名前:</label>
+                    <input type="text" id="name" placeholder="テキスト入力"><br><br>
+
+                    <label><input type="checkbox"> チェックボックス</label>
+                    <label><input type="radio" name="radio-test"> ラジオボタン</label><br><br>
+
+                    <button type="button">標準のボタン（button）</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- リセットCSSの切り替え用スクリプト -->
+    <script>
+        function toggleResetCSS() {
+            const resetCss = document.getElementById('reset-css');
+            const btn = document.getElementById('toggle-btn');
+            const statusText = document.getElementById('status-text');
+
+            if (resetCss.media === 'not all') {
+                // リセットCSSを有効にする
+                resetCss.media = 'all';
+                btn.textContent = 'リセットCSSをOFFにする';
+                btn.classList.add('active');
+                statusText.textContent = 'リセット適用中 (マージンや文字サイズが初期化されています)';
+                statusText.style.color = '#ef4444';
+            } else {
+                // リセットCSSを無効にする
+                resetCss.media = 'not all';
+                btn.textContent = 'リセットCSSをONにする';
+                btn.classList.remove('active');
+                statusText.textContent = 'デフォルト（ブラウザ標準スタイル）';
+                statusText.style.color = '#333';
+            }
+        }
+    </script>
+</body>
+
+</html>
