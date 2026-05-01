@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>わたしについて | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ========================================
+       HEADER / NAVIGATION
+  ======================================== -->
+  <header class="site_header">
+    <div class="header_inner">
+      <p class="site_name"><a href="index.html">名前</a></p>
+      <nav class="global_nav" aria-label="グローバルナビゲーション">
+        <button class="nav_toggle" aria-label="メニューを開く" aria-expanded="false">
+          <span class="nav_toggle_bar"></span>
+          <span class="nav_toggle_bar"></span>
+          <span class="nav_toggle_bar"></span>
+        </button>
+        <ul class="nav_list">
+          <li class="nav_item"><a class="nav_link" href="works.html">作ったもの</a></li>
+          <li class="nav_item"><a class="nav_link is_active" href="about.html">わたしについて</a></li>
+          <li class="nav_item"><a class="nav_link" href="index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================================
+         ページヘッダー
+    ======================================== -->
+    <div class="page_hero">
+      <div class="section_inner">
+        <h1 class="page_hero_heading">わたしについて</h1>
+      </div>
+    </div>
+
+    <!-- ========================================
+         ABOUT SECTION
+    ======================================== -->
+    <section class="about_section" aria-label="プロフィール">
+      <div class="section_inner">
+
+        <!-- プロフィール -->
+        <div class="about_profile">
+          <figure class="about_figure">
+            <img class="about_image" src="images/profile.jpg" alt="プロフィール写真" />
+          </figure>
+          <div class="about_profile_text">
+            <p class="about_description">サイトは製作に入った人間としっかりお話して見えてきます よろすず下記に触れた…</p>
+          </div>
+        </div>
+
+        <!-- できること -->
+        <div class="about_skills" aria-labelledby="skills_heading">
+          <h2 class="about_sub_heading" id="skills_heading">できること</h2>
+          <figure class="skills_figure">
+            <img class="skills_image" src="images/skills.png"
+              alt="使用できるツール・言語（HTML, CSS, JS, PHP, SQL, Figma, Illustrator, Photoshop, Git, WordPress）" />
+            <figcaption class="skills_caption">使用技術・ツール一覧</figcaption>
+          </figure>
+        </div>
+
+        <!-- 強み -->
+        <div class="about_strength" aria-labelledby="strength_heading">
+          <h2 class="about_sub_heading" id="strength_heading">強み</h2>
+          <div class="strength_card">
+            <p class="strength_text">よく知られる方法として人々の間に使われているものの多くは、もっとも重要なことをあなたに知らせるためのものです。あなたのことを伝えてください。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+  <footer class="site_footer">
+    <div class="footer_inner">
+      <small class="footer_copy">&copy; 2025 名前. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
