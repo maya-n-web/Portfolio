@@ -521,9 +521,13 @@ figure {
 }
 
 .strength_text {
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 2;
   color: var(--color_text_sub);
+}
+.strength_text li {
+  margin-bottom: var(--space_md);
+  list-style-type: circle;
 }
 
 /* ============================================================
