@@ -259,11 +259,9 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    160deg,
-    rgba(232, 164, 164, 0.18) 0%,
-    rgba(255, 255, 255, 0.06) 100%
-  );
+  background: linear-gradient(160deg,
+      rgba(232, 164, 164, 0.18) 0%,
+      rgba(255, 255, 255, 0.06) 100%);
 }
 
 .hero_catch_text {
@@ -292,6 +290,7 @@ figure {
 }
 
 @keyframes scroll_pulse {
+
   0%,
   100% {
     opacity: 1;
@@ -434,19 +433,28 @@ figure {
   max-width: 800px;
   height: 550px;
 }
-.work_details > h3 {
+
+.work_details>h3 {
   margin: var(--space_md) 0;
 }
 
-.list_details > li {
+.list_details>li {
   list-style-type: disc;
   padding-left: 10px;
 }
+
 .works_list_details {
   display: flex;
   gap: var(--space_md);
   margin: var(--space_md) 0;
   align-items: center;
+}
+
+.works_pagination {
+  display: flex;
+  gap: var(--space_xl);
+  justify-content: left;
+  margin-top: var(--space_md);
 }
 
 /* ============================================================
@@ -506,6 +514,7 @@ figure {
   flex-direction: column;
   gap: var(--space_lg);
 }
+
 .about_skills {
   padding: 100px 0 50px 0;
 }
@@ -521,6 +530,7 @@ figure {
 .skills:has(#skills-tool:checked) .skill-card:not([data-cat='tool']) {
   display: none;
 }
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -531,9 +541,11 @@ figure {
 .skills-tabs {
   font-size: 1.5rem;
 }
+
 .skills-tabs__tab {
   padding-right: 20px;
 }
+
 .skills_image {
   max-width: 480px;
   height: auto;
@@ -564,6 +576,7 @@ figure {
   line-height: 2;
   color: var(--color_text_sub);
 }
+
 .strength_text li {
   margin-bottom: var(--space_md);
   list-style-type: circle;
@@ -754,6 +767,7 @@ figure {
    レスポンシブ：タブレット（768px以下）
    ============================================================ */
 @media (max-width: 768px) {
+
   /* ナビゲーション */
   .nav_toggle {
     display: flex;
@@ -811,6 +825,7 @@ figure {
    レスポンシブ：スマートフォン（480px以下）
    ============================================================ */
 @media (max-width: 480px) {
+
   /* ヒーロー */
   .hero_figure {
     height: 220px;
