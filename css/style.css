@@ -327,7 +327,7 @@ figure {
   font-weight: 500;
   letter-spacing: 0.12em;
   color: var(--color_text_sub);
-  margin-bottom: var(--space_md);
+  margin-bottom: var(--space_xl);
   padding-left: 0.75rem;
   border-left: 2px solid var(--color_primary);
 }
@@ -408,6 +408,40 @@ figure {
 
 .works_more_link:hover {
   color: var(--color_primary);
+}
+
+/*詳細ページ */
+.works_banner_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space_md);
+}
+
+.work_details {
+  display: block;
+  padding: var(--space_md);
+  font-size: var(--font_body);
+  line-height: 1.8;
+  color: var(--color_text_sub);
+  background-color: var(--color_primary_pale);
+  border: var(--color_surface);
+  border-radius: 30px;
+}
+
+.work_details > h3 {
+  margin: var(--space_md) 0;
+}
+
+.list_details > li {
+  list-style-type: disc;
+  padding-left: 10px;
+}
+.works_list_details {
+  display: flex;
+  gap: var(--space_md);
+  margin: var(--space_md) 0;
+  align-items: center;
 }
 
 /* ============================================================
@@ -659,7 +693,7 @@ figure {
    ページヘッダー（works.html / about.html 共通）
    ============================================================ */
 .page_hero {
-  padding: var(--space_lg) 0 var(--space_md);
+  padding: var(--space_md) 0 var(--space_md);
   background: var(--color_primary_pale);
   border-bottom: 1px solid var(--color_border);
 }
