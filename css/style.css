@@ -411,6 +411,7 @@ figure {
 }
 
 /*詳細ページ */
+
 .works_banner_wrapper {
   display: flex;
   flex-direction: column;
@@ -420,7 +421,7 @@ figure {
 
 .work_details {
   display: block;
-  padding: var(--space_md);
+  padding: 2rem var(--space_lg);
   font-size: var(--font_body);
   line-height: 1.8;
   color: var(--color_text_sub);
@@ -429,6 +430,10 @@ figure {
   border-radius: 30px;
 }
 
+.works_card_image {
+  max-width: 800px;
+  height: 550px;
+}
 .work_details > h3 {
   margin: var(--space_md) 0;
 }
