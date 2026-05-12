@@ -259,9 +259,11 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg,
-      rgba(232, 164, 164, 0.18) 0%,
-      rgba(255, 255, 255, 0.06) 100%);
+  background: linear-gradient(
+    160deg,
+    rgba(232, 164, 164, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
 }
 
 .hero_catch_text {
@@ -290,7 +292,6 @@ figure {
 }
 
 @keyframes scroll_pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -306,6 +307,33 @@ figure {
 /* ============================================================
    実績（作ったもの）セクション
    ============================================================ */
+
+/* 共通の初期状態 */
+
+.js-reveal {
+  opacity: 0;
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.8s;
+  /* cubic-bezierを使うと「シュッ」と鋭く入って「ピタッ」と止まる高級感が出ます */
+}
+
+/* 左の画面外に完全に隠す */
+.works_category_left {
+  transform: translateX(-100px);
+}
+
+/* 右の画面外に完全に隠す */
+.works_category_right {
+  transform: translateX(100px);
+}
+
+/* 出てきた時の状態 */
+.js-reveal.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .works_section {
   padding: var(--space_xl) 0;
   background: var(--color_bg);
@@ -434,11 +462,11 @@ figure {
   height: 550px;
 }
 
-.work_details>h3 {
+.work_details > h3 {
   margin: var(--space_md) 0;
 }
 
-.list_details>li {
+.list_details > li {
   list-style-type: disc;
   padding-left: 10px;
 }
@@ -767,7 +795,6 @@ figure {
    レスポンシブ：タブレット（768px以下）
    ============================================================ */
 @media (max-width: 768px) {
-
   /* ナビゲーション */
   .nav_toggle {
     display: flex;
@@ -825,7 +852,6 @@ figure {
    レスポンシブ：スマートフォン（480px以下）
    ============================================================ */
 @media (max-width: 480px) {
-
   /* ヒーロー */
   .hero_figure {
     height: 220px;

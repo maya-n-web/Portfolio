@@ -1,3 +1,18 @@
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  },
+  {
+    rootMargin: '0px 0px -10% 0px', // 画面下端から10%入ったところで発火（微調整用）
+  },
+);
+
+document.querySelectorAll('.js-reveal').forEach((el) => observer.observe(el));
+
 window.submitted = false;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // --- 1. ページ読み込み時：保存されたデータを復元 ---
     const savedData = JSON.parse(localStorage.getItem(storageKey));
     if (savedData) {
-      Object.keys(savedData).forEach(key => {
+      Object.keys(savedData).forEach((key) => {
         const input = form.querySelector(`[name="${key}"]`);
         if (input) input.value = savedData[key];
       });
