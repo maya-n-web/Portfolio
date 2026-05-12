@@ -76,6 +76,8 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--color_text_sub);
+  font-family: var(--font_body);
 }
 
 figure {
@@ -218,41 +220,20 @@ figure {
    ヒーローセクション
    ============================================================ */
 .hero_section {
+  width: 100%;
+  height: 100vh;
   position: relative;
   background: var(--color_primary_pale);
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .hero_inner {
-  position: relative;
-  width: 100%;
-  max-width: var(--container_width);
-  margin: 0 auto;
-  padding: 0 var(--space_md);
-}
-
-.hero_figure {
-  width: 100%;
-  height: 480px;
-  overflow: hidden;
-  border-radius: 2px;
-}
-
-.hero_image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  background: var(--color_primary_light);
-  /* 画像がない場合のプレースホルダー */
-  min-height: 100%;
 }
-
+.hero_image {
+  width: 100%;
+  height: 100vh;
+}
 .hero_catch {
   position: absolute;
   inset: 0;
@@ -276,7 +257,6 @@ figure {
 }
 
 .hero_scroll_indicator {
-  position: absolute;
   bottom: var(--space_md);
   right: var(--space_md);
 }
