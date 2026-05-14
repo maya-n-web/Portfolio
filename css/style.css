@@ -635,7 +635,7 @@ figure {
 .work_details {
   display: block;
   padding: 2rem var(--space_lg);
-  font-size: var(--font_body);
+  font-size: 1.2rem;
   line-height: 2;
   color: var(--color_text_sub);
   background-color: var(--color_primary_pale);
