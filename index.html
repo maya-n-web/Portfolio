@@ -1,207 +1,282 @@
 <!doctype html>
 <html lang="ja">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maya Nishiiについて" />
-  <link rel="icon" href="images/favicon.ico" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Maya Nishiiについて" />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/
       css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-</head>
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <!-- ========================================
+  <body>
+    <!-- ========================================
     HEADER / NAVIGATION
     ======================================== -->
-  <header class="site_header">
-    <div class="header_inner">
-      <h2 class="site_name">
-        <a href="index.html">PORTFOLIO | MAYA NISHII</a>
-      </h2>
-      <nav class="global_nav" aria-label="グローバルナビゲーション">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a class="nav_link" href="works.html">作ったもの</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="about.html">わたしについて</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#contact">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header class="site_header">
+      <div class="header_inner">
+        <h2 class="site_name">
+          <a href="index.html">PORTFOLIO | MAYA NISHII</a>
+        </h2>
+        <nav class="global_nav" aria-label="グローバルナビゲーション">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a class="nav_link" href="works.html">作ったもの</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="about.html">わたしについて</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
 
-  <main>
-    <!-- ========================================
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div id="mask"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========================================
       HERO SECTION
       ======================================== -->
-    <section class="hero_section" aria-label="ヒーローエリア">
-      <div class="hero_inner">
-        <figure class="hero_figure">
-          <img class="hero_image" src="images/pic_01_l.jpg" alt="ヒーローイメージ" width="1400" height="800" />
-        </figure>
-        <div class="hero_catch">
-          <h1 class="hero_catch_text">
-            <div class="hero_catch_text_up">
-              <p>MAYA NISHII</p>
-            </div>
-            <div class="hero_catch_text_down">
-              <p>PORTFOLIO</p>
-            </div>
-          </h1>
+      <section class="hero_section" aria-label="ヒーローエリア">
+        <div class="hero_inner">
+          <figure class="hero_figure">
+            <img
+              class="hero_image"
+              src="images/pic_01_l.jpg"
+              alt="ヒーローイメージ"
+              width="1400"
+              height="800"
+            />
+          </figure>
+          <div class="hero_catch">
+            <h1 class="hero_catch_text">
+              <div class="hero_catch_text_up">
+                <p>MAYA NISHII</p>
+              </div>
+              <div class="hero_catch_text_down">
+                <p>PORTFOLIO</p>
+              </div>
+            </h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================
+      <!-- ========================================
          WORKS SECTION（トップ：各カテゴリ2枚ずつ）
     ======================================== -->
-    <section class="works_section" id="works" aria-labelledby="works_heading">
-      <div class="section_inner">
-        <section class="section_header section_header_top">
-          <h2 class="section_heading" id="works_heading">作ったもの</h2>
-        </section>
+      <section class="works_section" id="works" aria-labelledby="works_heading">
+        <div class="section_inner">
+          <section class="section_header section_header_top">
+            <h2 class="section_heading" id="works_heading">作ったもの</h2>
+          </section>
 
-        <!-- オリジナル Web 制作物（2枚） -->
-        <article class="works_category_left js-reveal" aria-labelledby="copy_works_heading">
-          <h3 class="works_category_heading_top works_category_heading" id="original_works_heading">
-            <a href="works.html#jump-original">オリジナル Web 制作物</a>
-          </h3>
-        </article>
+          <!-- オリジナル Web 制作物（2枚） -->
+          <article
+            class="works_category_left js-reveal"
+            aria-labelledby="copy_works_heading"
+          >
+            <h3
+              class="works_category_heading_top works_category_heading"
+              id="original_works_heading"
+            >
+              <a href="works.html#jump-original">オリジナル Web 制作物</a>
+            </h3>
+          </article>
 
-        <!-- バナー / ロゴ作成（2枚） -->
-        <article class="works_category_right js-reveal" aria-labelledby="banner_works_heading">
-          <h3 class="works_category_heading_top works_category_heading" id="banner_works_heading">
-            <a href="works.html#jump-banner">バナー/ロゴ作成</a>
-          </h3>
-        </article>
+          <!-- バナー / ロゴ作成（2枚） -->
+          <article
+            class="works_category_right js-reveal"
+            aria-labelledby="banner_works_heading"
+          >
+            <h3
+              class="works_category_heading_top works_category_heading"
+              id="banner_works_heading"
+            >
+              <a href="works.html#jump-banner">バナー/ロゴ作成</a>
+            </h3>
+          </article>
 
-        <!-- コピーサイト（2枚） -->
-        <article class="works_category_left js-reveal" aria-labelledby="copy_works_heading">
-          <h3 class="works_category_heading_top works_category_heading" id="copy_works_heading">
-            <a href="works.html#jump-copy">コピーサイト</a>
-          </h3>
-        </article>
-      </div>
-    </section>
+          <!-- コピーサイト（2枚） -->
+          <article
+            class="works_category_left js-reveal"
+            aria-labelledby="copy_works_heading"
+          >
+            <h3
+              class="works_category_heading_top works_category_heading"
+              id="copy_works_heading"
+            >
+              <a href="works.html#jump-copy">コピーサイト</a>
+            </h3>
+          </article>
+        </div>
+      </section>
 
-    <!-- ========================================
+      <!-- ========================================
          ABOUT SECTION
     ======================================== -->
 
-    <section class="contact_section" id="contact" aria-labelledby="contact_heading">
-      <div class="section_inner">
-        <section class="section_header section_header_top">
-          <h2 class="section_heading">わたしについて</h2>
-        </section>
-        <div class="about_profile">
-          <figure class="about_figure">
-            <img class="about_image" src="images/profile.jpg" alt="プロフィール写真" />
-          </figure>
-          <div class="about_profile_text">
-            <p class="about_description">
-              短大卒業後、正社員として4年間接客業に従事。
-              <br/>
-              その後カナダへ数年間移住。コロナ化での現地での生きた情報を
-              日本に発信するために開設した HP 運営をきっかけに、WEB デザ
-              インやシステム管理に興味を持つ。
-              <br/>
-              帰国後は Web エンジニアを目 指すことを決意。4 ヶ月間スクールで
-              Web デザインやプログラミ
-              ングについて学び、現在は転職活動をしています。
-            </p>
+      <section
+        class="contact_section"
+        id="contact"
+        aria-labelledby="contact_heading"
+      >
+        <div class="section_inner">
+          <section class="section_header section_header_top">
+            <h2 class="section_heading">わたしについて</h2>
+          </section>
+          <div class="about_profile">
+            <figure class="about_figure">
+              <img
+                class="about_image"
+                src="images/profile.jpg"
+                alt="プロフィール写真"
+              />
+            </figure>
+            <div class="about_profile_text">
+              <p class="about_description">
+                短大卒業後、正社員として4年間接客業に従事。
+                <br />
+                その後カナダへ数年間移住。コロナ化での現地での生きた情報を
+                日本に発信するために開設した HP 運営をきっかけに、WEB デザ
+                インやシステム管理に興味を持つ。
+                <br />
+                帰国後は Web エンジニアを目 指すことを決意。4 ヶ月間スクールで
+                Web デザインやプログラミ
+                ングについて学び、現在は転職活動をしています。
+              </p>
+            </div>
+          </div>
+
+          <div class="works_more">
+            <a class="works_more_link" href="about.html">詳しくみる</a>
           </div>
         </div>
+      </section>
 
-        <div class="works_more">
-          <a class="works_more_link" href="about.html">詳しくみる</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
+      <!-- ========================================
          CONTACT SECTION
     ======================================== -->
-    <section class="contact_section" id="contact" aria-labelledby="contact_heading">
-      <div class="section_inner">
-        <section class="section_header section_header_top">
-          <h2 class="section_heading contact_heading_text" id="contact_heading">
-            CONTACT
-          </h2>
-        </section>
-        <div class="contact_body">
-          <p class="contact_lead">
-            お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。
-          </p>
+      <section
+        class="contact_section"
+        id="contact"
+        aria-labelledby="contact_heading"
+      >
+        <div class="section_inner">
+          <section class="section_header section_header_top">
+            <h2
+              class="section_heading contact_heading_text"
+              id="contact_heading"
+            >
+              CONTACT
+            </h2>
+          </section>
+          <div class="contact_body">
+            <p class="contact_lead">
+              お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。
+            </p>
 
-          <form id="g-form" class="contact_form"
-            action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
-            method="post" target="hidden_iframe">
-            <div class="form_group">
-              <label class="form_label" for="contact_name">
-                お名前
-                <span class="form_required" aria-label="必須">*</span>
-              </label>
-              <input class="form_input" type="text" id="contact_name" name="entry.1020937472" required
-                placeholder="山田 太郎" />
-            </div>
+            <form
+              id="g-form"
+              class="contact_form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
+              method="post"
+              target="hidden_iframe"
+            >
+              <div class="form_group">
+                <label class="form_label" for="contact_name">
+                  お名前
+                  <span class="form_required" aria-label="必須">*</span>
+                </label>
+                <input
+                  class="form_input"
+                  type="text"
+                  id="contact_name"
+                  name="entry.1020937472"
+                  required
+                  placeholder="山田 太郎"
+                />
+              </div>
 
-            <div class="form_group">
-              <label class="form_label" for="contact_email">
-                メールアドレス
-                <span class="form_required" aria-label="必須">*</span>
-              </label>
-              <input class="form_input" type="email" id="contact_email" name="entry.664999081" required
-                placeholder="example@mail.com" />
-            </div>
+              <div class="form_group">
+                <label class="form_label" for="contact_email">
+                  メールアドレス
+                  <span class="form_required" aria-label="必須">*</span>
+                </label>
+                <input
+                  class="form_input"
+                  type="email"
+                  id="contact_email"
+                  name="entry.664999081"
+                  required
+                  placeholder="example@mail.com"
+                />
+              </div>
 
-            <div class="form_group">
-              <label class="form_label" for="contact_message">
-                メッセージ
-                <span class="form_required" aria-label="必須">*</span>
-              </label>
-              <textarea class="form_textarea" id="contact_message" name="entry.1720009579" rows="6" required
-                placeholder="お気軽にご記入ください…"></textarea>
-            </div>
+              <div class="form_group">
+                <label class="form_label" for="contact_message">
+                  メッセージ
+                  <span class="form_required" aria-label="必須">*</span>
+                </label>
+                <textarea
+                  class="form_textarea"
+                  id="contact_message"
+                  name="entry.1720009579"
+                  rows="6"
+                  required
+                  placeholder="お気軽にご記入ください…"
+                ></textarea>
+              </div>
 
-            <div class="form_submit">
-              <button class="form_button" type="submit">送信する</button>
+              <div class="form_submit">
+                <button class="form_button" type="submit">送信する</button>
+              </div>
+            </form>
+           <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+            onload="if (submitted) { alert('送信が完了しました'); location.reload(); }"
+          ></iframe>
             </div>
-          </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="
-                if (submitted) {
-                  clearFormStorage();
-                  alert('送信が完了しました');
-                  location.reload();
-                }
-              "></iframe>
+          </section>
         </div>
-      </div>
-    </section>
-  </main>
+    </main>
 
-  <!-- ========================================
+    <!-- ========================================
        FOOTER
   ======================================== -->
-  <footer class="site_footer">
+    <footer class="site_footer">
     <div class="footer_inner">
       <small class="footer_copy">
         &copy; 2026. Maya Nishii All rights reserved.
       </small>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+
+  <script src="js/jquery-3.7.1.js"></script>
+  <script src="js/lightbox.js"></script>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

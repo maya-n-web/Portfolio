@@ -1,3 +1,34 @@
+// 1. iframeエラー対策（JSファイルの冒頭に配置）
+var submitted = false;
+
+$(function () {
+  // 2. ハンバーガーメニューの開閉処理
+  $('.toggle_btn').on('click', function () {
+    // <body>に .open を付与（三本線の変形とマスク表示用）
+    $('body').toggleClass('open');
+
+    // .global_navに .is_open を付与（CSSの .global_nav.is_open に合わせる）
+    $('.global_nav').toggleClass('is_open');
+  });
+
+  // 3. 背景（マスク）をクリックした時に閉じる
+  $('#mask').on('click', function () {
+    $('body').removeClass('open');
+    $('.global_nav').removeClass('is_open');
+  });
+
+  // 4. リンクをクリックした時に閉じる（ページ内リンク対策）
+  $('.nav_link').on('click', function () {
+    $('body').removeClass('open');
+    $('.global_nav').removeClass('is_open');
+  });
+});
+///////////////////////////////////////////////////////////////////
+
+function submitted_func() {
+  // HTML側の onload="submitted_func()" と合わせる
+  window.location = 'thanks.html'; // 飛ばしたい先のURL
+}
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
