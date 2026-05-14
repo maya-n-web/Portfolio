@@ -233,13 +233,15 @@ figure {
     transform: translateY(-150%);
     transition: transform var(--transition_base);
     z-index: 99;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .global_nav.is_open {
     transform: translateY(0);
-    background: rgba(255, 213, 213, 0.9);
+    background: rgba(242, 193, 193, 0.5);
     border-radius: 0 0 15px 15px;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
   }
 
@@ -374,7 +376,6 @@ figure {
 
 @keyframes hero_catch_text_up {
   0% {
-    opacity: 1;
     transform: scale(0.8);
   }
   100% {
@@ -399,7 +400,7 @@ figure {
   view-timeline-axis: block;
   animation: scroll-anim linear;
   animation-timeline: --zoom-move-fade;
-  animation-range: cover 50% exit 0%;
+  animation-range: cover 50% exit 100%;
 }
 
 @keyframes scroll-anim {
@@ -456,7 +457,7 @@ figure {
 }
 
 .js-reveal {
-  transition: transform 1.2s ease-out;
+  transition: transform 1.8s ease-out;
   background-color: var(--color_bg);
 }
 
@@ -535,6 +536,7 @@ figure {
   display: flex;
   flex-direction: column;
   background: var(--color_surface);
+  border: 1px solid var(--color_primary_light);
   border-radius: 4px;
   overflow: hidden;
   transition:
@@ -672,10 +674,13 @@ figure {
 /* SP */
 @media (max-width: 768px) {
   .work_details {
-    padding: var(--space_sm);
+    padding: var(--space_md);
     border-radius: 16px;
   }
 
+  .works_card {
+    max-width: 300px;
+  }
   .works_card_image {
     max-width: 100%;
     height: auto;
@@ -694,23 +699,17 @@ figure {
 }
 
 /* ============================================================
-   Works ページ：3カラムグリッド
+   Works ページ：グリッド
    ============================================================ */
 .works_grid--wide {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* タブレット：2カラム */
-@media (max-width: 960px) {
-  .works_grid--wide {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* SP：1カラム */
+/* SP：2カラム */
 @media (max-width: 768px) {
   .works_grid--wide {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space_md);
   }
 }
 
