@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/
             css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
     rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 
 
 <body>
@@ -23,33 +23,33 @@
   <!-- ========================================
        HEADER / NAVIGATION
   ======================================== -->
-    <header class="site_header">
-      <div class="header_inner">
-        <h2 class="site_name">
-          <a href="index.html">PORTFOLIO | MAYA NISHII</a>
-        </h2>
-        <nav class="global_nav" aria-label="グローバルナビゲーション">
-          <ul class="nav_list">
-            <li class="nav_item">
-              <a class="nav_link" href="works.html">作ったもの</a>
-            </li>
-            <li class="nav_item">
-              <a class="nav_link" href="about.html">わたしについて</a>
-            </li>
-            <li class="nav_item">
-              <a class="nav_link" href="#contact">CONTACT</a>
-            </li>
-          </ul>
-        </nav>
-    
-        <div class="toggle_btn">
-          <span></span>
-          <span></span>
-        </div>
+  <header class="site_header">
+    <div class="header_inner">
+      <h2 class="site_name">
+        <a href="index.html">PORTFOLIO | MAYA NISHII</a>
+      </h2>
+      <nav class="global_nav" aria-label="グローバルナビゲーション">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a class="nav_link" href="works.html">作ったもの</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="about.html">わたしについて</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
 
-        <div id="mask"></div>
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
       </div>
-    </header>
+
+      <div id="mask"></div>
+    </div>
+  </header>
 
   <main>
 
@@ -65,10 +65,15 @@
     <!-- ========================================
          ABOUT SECTION
     ======================================== -->
+
+
     <section class="about_section" aria-label="プロフィール">
       <div class="section_inner">
 
         <!-- プロフィール -->
+        <div class="about_skills" aria-labelledby="skills_heading">
+          <h2 class="about_sub_heading" id="skills_heading">プロフィール</h2>
+        </div>
         <div class="about_profile">
           <figure class="about_figure">
             <img class="about_image" src="images/profile.jpg" alt="プロフィール写真" />
@@ -185,21 +190,22 @@
         </section>
 
         <!-- 強み -->
-        <div class="about_strength" aria-labelledby="strength_heading">
-          <h2 class="about_sub_heading" id="strength_heading">強み</h2>
-          <div class="strength_card">
-            <ul class="strength_text">
-              <li>
-                論理的思考　問題に対して物事を分解し、解決のために筋道を立てて整理する力があります。
-                ”とりあえず”の判断ではなく、しっかり根拠をもって判断するために物事を分析して判断し行動に移します。
-              </li>
-
-              <li>
-                セルフマネジメント力　ただ指示を待つのではなく、目標達成のために自ら考え、行動を修正し続ける力があります。
-                過去に正社員として勤務していました。働いていた現場では常に上司がいる環境ではなく、
-                自分がその時の責任者であるタイミングも多々ありました。そのため指示待ちの姿勢ではなく常に自分でも考えて行動することができます。
-          </div>
+        <div class="about_skills" aria-labelledby="skills_heading">
+          <h2 class="about_sub_heading" id="skills_heading">わたしの強み</h2>
         </div>
+        <div class="strength_card">
+          <ul class="strength_text">
+            <li>
+              <strong>論理的思考</strong><br>問題に対して物事を分解し、解決のために筋道を立てて整理する力があります。
+              ”とりあえず”の判断ではなく、しっかり根拠をもって判断するために物事を分析して判断し行動に移します。
+            </li>
+
+            <li>
+              <strong>セルフマネジメント力</strong><br>ただ指示を待つのではなく、目標達成のために自ら考え、行動を修正し続ける力があります。
+              過去に正社員として勤務していました。働いていた現場では常に上司がいる環境ではなく、
+              自分がその時の責任者であるタイミングも多々ありました。そのため指示待ちの姿勢ではなく常に自分でも考えて行動することができます。
+        </div>
+      </div>
 
       </div>
     </section>
@@ -210,12 +216,16 @@
          CONTACT SECTION
     ======================================== -->
     <section class="contact_section" id="contact" aria-labelledby="contact_heading">
-      <div class="section_inner">
-        <section class="section_header">
-          <h2 class="section_heading contact_heading_text" id="contact_heading">CONTACT</h2>
+      <div class="section_inner_top">
+        <section class="section_header section_header_top">
+          <h2 class="section_heading" id="contact_heading">
+            CONTACT
+          </h2>
         </section>
         <div class="contact_body">
-          <p class="contact_lead">お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。</p>
+          <p class="contact_lead">
+            お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。
+          </p>
 
           <form id="g-form" class="contact_form"
             action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
@@ -258,10 +268,10 @@
 
   </main>
 
-    <!-- ========================================
+  <!-- ========================================
        FOOTER
   ======================================== -->
-    <footer class="site_footer">
+  <footer class="site_footer">
     <div class="footer_inner">
       <small class="footer_copy">
         &copy; 2026. Maya Nishii All rights reserved.
@@ -271,8 +281,8 @@
 
   <script src="js/jquery-3.7.1.js"></script>
   <script src="js/lightbox.js"></script>
- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

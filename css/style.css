@@ -24,8 +24,11 @@
   --space_xs: 0.5rem;
   --space_sm: 1rem;
   --space_md: 2rem;
+  --space_mdlg: 1.5rem;
   --space_lg: 4rem;
   --space_xl: 6rem;
+  --space_xll: 8rem;
+  --space_center: 900px;
 
   /* レイアウト */
   --container_width: 1500px;
@@ -56,6 +59,11 @@ body {
   color: var(--color_text);
   background-color: var(--color_bg);
   line-height: 2;
+}
+
+
+main {
+  overflow: clip;
 }
 
 img {
@@ -89,6 +97,7 @@ figure {
 
 .section_header {
   margin-bottom: var(--space_lg);
+
 }
 
 .section_heading {
@@ -121,14 +130,23 @@ figure {
   margin-top: 0.5rem;
 }
 
+
+
+
+
+
 /* SP：セクション内側の余白を縮小 */
 @media (max-width: 768px) {
+  .section_header {
+    padding: var(--space_xs);
+  }
+
   .section_inner {
-    padding: 0 var(--space_sm);
+    padding: var(--space_xs);
   }
 
   .section_heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -259,6 +277,7 @@ figure {
     left: 0;
     opacity: 1;
   }
+
   .toggle_btn {
     width: 30px;
     height: 30px;
@@ -280,18 +299,21 @@ figure {
     border-radius: 4px;
     transition: all 0.5s;
   }
+
   /*
   1本目の線の位置を設定
   */
   .toggle_btn span:nth-child(1) {
     top: 10px;
   }
+
   /*
 2本目の線の位置を設定
 */
   .toggle_btn span:nth-child(2) {
     bottom: 10px;
   }
+
   /*
 1本目の線を-45度回転
 */
@@ -299,6 +321,7 @@ figure {
     -webkit-transform: translateY(4px) rotate(-45deg);
     transform: translateY(4px) rotate(-45deg);
   }
+
   /*
 2本目の線を45度回転
 */
@@ -306,10 +329,12 @@ figure {
     -webkit-transform: translateY(-4px) rotate(45deg);
     transform: translateY(-4px) rotate(45deg);
   }
+
   #mask {
     display: none;
     transition: all 0.5s;
   }
+
   /*
 メニューを開いている時は、全体を黒背景にする
 */
@@ -378,6 +403,7 @@ figure {
   0% {
     transform: scale(0.8);
   }
+
   100% {
     opacity: 1;
     transform: scale(1.2);
@@ -388,8 +414,9 @@ figure {
   0% {
     transform: translateX(100px);
   }
+
   100% {
-    transform: translateX(-90px);
+    transform: translateX(-85px);
   }
 }
 
@@ -408,6 +435,7 @@ figure {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+
   100% {
     opacity: 0;
     transform: translateY(100px) scale(2);
@@ -425,6 +453,7 @@ figure {
     0% {
       transform: translateX(40px);
     }
+
     100% {
       transform: translateX(-45px);
     }
@@ -450,6 +479,7 @@ figure {
     opacity: 0;
     transform: translateY(-30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -464,6 +494,7 @@ figure {
 .works_category_left {
   transform: translateX(-100px);
 }
+
 .works_category_right {
   transform: translateX(100px);
 }
@@ -474,6 +505,7 @@ figure {
 
 /* SP：横スライドを抑制（画面幅が狭いと見切れるため） */
 @media (max-width: 768px) {
+
   .works_category_left,
   .works_category_right {
     transform: translateX(0);
@@ -484,12 +516,12 @@ figure {
    Works セクション（TOP）
    ============================================================ */
 .works_section {
-  padding: var(--space_xl) 0;
+  padding: var(--space_lg) 0;
   background: var(--color_bg);
 }
 
 .works_category {
-  margin-bottom: var(--space_xl);
+  margin-bottom: 200px;
 }
 
 .works_category:last-child {
@@ -505,23 +537,48 @@ figure {
   color: var(--color_text_sub);
   margin-bottom: var(--space_xl);
   padding: 2rem;
-  border: 2px solid var(--color_primary);
-  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 2px white;
 }
+
+.works_category_heading span {
+  position: relative;
+  z-index: 10;
+}
+
+.works_category_heading:before {
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  background: var(--color_primary_light);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50%;
+  border: dashed 1px white;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  /* 丸は要素の中で背後に回る */
+  box-shadow: 0px 0px 0px 5px var(--color_primary_light);
+}
+
 
 .works_category_heading_top a {
   display: block;
 }
 
-.works_category_heading_top {
+
+
+.works_category_heading_top:before {
   transition:
-    transform 1s ease-in-out,
-    background-color 1s ease-in-out;
+    transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.works_category_heading_top:hover {
+.works_category_heading_top:hover:before {
   background-color: var(--color_primary);
-  transform: scale(0.95);
+  transform: translate(-50%, -50%) scale(0.85);
 }
 
 /* グリッド */
@@ -643,11 +700,11 @@ figure {
   border-radius: 30px;
 }
 
-.work_details > h3 {
+.work_details>h3 {
   margin: var(--space_md) 0;
 }
 
-.list_details > li {
+.list_details>li {
   list-style-type: disc;
   padding-left: 10px;
 }
@@ -681,6 +738,7 @@ figure {
   .works_card {
     max-width: 300px;
   }
+
   .works_card_image {
     max-width: 100%;
     height: auto;
@@ -710,6 +768,7 @@ figure {
   .works_grid--wide {
     grid-template-columns: 1fr 1fr;
     gap: var(--space_md);
+    overflow: hidden;
   }
 }
 
@@ -717,17 +776,24 @@ figure {
    About セクション
    ============================================================ */
 .about_section {
-  padding: var(--space_xl) 0;
   background-color: var(--color_bg);
+}
+
+.section_inner_top {
+  max-width: var(--space_center);
+  margin: 0 auto;
 }
 
 /* プロフィール */
 .about_profile {
+  max-width: var(--space_center);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: var(--space_lg);
   align-items: start;
   margin-bottom: var(--space_xl);
+
 }
 
 .about_figure {
@@ -744,10 +810,12 @@ figure {
   object-fit: cover;
 }
 
+
 .about_profile_text .about_description {
   font-size: 1.2rem;
   line-height: 2;
   color: var(--color_text);
+  margin: 0 auto;
 }
 
 /* サブ見出し */
@@ -766,7 +834,7 @@ figure {
 
 /* スキル */
 .about_skills {
-  padding: 100px 0 50px 0;
+  padding: 80px 0 10px 0;
 }
 
 .skills {
@@ -778,9 +846,11 @@ figure {
 .skills:has(#skills-lang:checked) .skill-card:not([data-cat='lang']) {
   display: none;
 }
+
 .skills:has(#skills-fwk:checked) .skill-card:not([data-cat='fwk']) {
   display: none;
 }
+
 .skills:has(#skills-tool:checked) .skill-card:not([data-cat='tool']) {
   display: none;
 }
@@ -814,8 +884,9 @@ figure {
 
 /* 強み */
 .about_strength {
-  margin-bottom: 0;
-  padding: 100px 0 50px 0;
+  max-width: var(--space_center);
+  padding: 150px 0 50px 0;
+  margin: 0 auto;
 }
 
 .strength_card {
@@ -823,6 +894,8 @@ figure {
   border-radius: 4px;
   padding: var(--space_md) var(--space_lg);
   box-shadow: 0 2px 16px rgba(180, 120, 120, 0.07);
+  max-width: var(--space_center);
+  margin: 0 auto;
 }
 
 .strength_text {
@@ -839,13 +912,14 @@ figure {
 /* SP */
 @media (max-width: 768px) {
   .about_section {
-    padding: var(--space_lg) 0;
+    padding: var(--space_md) 0;
   }
 
   .about_profile {
     grid-template-columns: 1fr;
     gap: var(--space_md);
     margin-bottom: var(--space_lg);
+    padding: var(--space_xs);
   }
 
   .about_figure {
@@ -854,15 +928,16 @@ figure {
 
   .about_sub_heading {
     font-size: 1.5rem;
+    margin: 0;
   }
 
-  .about_skills {
-    padding: var(--space_lg) 0 var(--space_md) 0;
+  .skills {
+    gap: 0;
   }
 
   .skills-grid {
     gap: var(--space_md);
-    padding: 10px 0;
+    padding: var(--space_lg) 0;
   }
 
   .skills-tabs {
@@ -871,6 +946,10 @@ figure {
 
   .skills_image {
     max-width: 100%;
+  }
+
+  .about_skills {
+    padding: 10px 0;
   }
 
   .about_strength {
@@ -886,17 +965,23 @@ figure {
    Contact セクション
    ============================================================ */
 .contact_section {
-  padding: var(--space_xl) 0;
+  padding: var(--space_xl) var(--space_md);
   background: var(--color_bg);
+}
+
+.section_heading_contact_top {
+  text-align: center;
 }
 
 .contact_heading_text {
   font-family: var(--font_display);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
 }
+
 
 .contact_body {
   max-width: 640px;
+  margin: 0 auto;
 }
 
 .contact_lead {
@@ -992,6 +1077,7 @@ figure {
 
   .contact_body {
     max-width: 100%;
+    padding: var(--space_xs);
   }
 
   .contact_lead {
@@ -1008,7 +1094,7 @@ figure {
    ページヘッダー（works.html / about.html 共通）
    ============================================================ */
 .page_hero {
-  padding: var(--space_md) 0;
+  padding: 0;
   background: var(--color_primary_pale);
   border-bottom: 1px solid var(--color_border);
 }
@@ -1028,9 +1114,8 @@ figure {
   display: block;
   font-family: var(--font_body);
   font-size: 1.2rem;
-  letter-spacing: 0.05em;
   color: var(--color_primary);
-  margin-bottom: 0.25rem;
+  height: 1.3em;
 }
 
 .page_hero_heading::after {
