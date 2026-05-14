@@ -17,17 +17,13 @@
   --font_display: 'Cormorant Garamond', serif;
   --font_body: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
   --font_weight_light: 200;
-  --font_weight_normal: 400;
-  --font_weight_bold: 700;
 
   /* スペーシング */
   --space_xs: 0.5rem;
   --space_sm: 1rem;
   --space_md: 2rem;
-  --space_mdlg: 1.5rem;
   --space_lg: 4rem;
   --space_xl: 6rem;
-  --space_xll: 8rem;
   --space_center: 900px;
 
   /* レイアウト */
@@ -61,7 +57,6 @@ body {
   line-height: 2;
 }
 
-
 main {
   overflow: clip;
 }
@@ -86,6 +81,10 @@ figure {
   margin: 0;
 }
 
+video {
+  filter: grayscale(50%);
+}
+
 /* ============================================================
    共通ユーティリティ
    ============================================================ */
@@ -97,7 +96,6 @@ figure {
 
 .section_header {
   margin-bottom: var(--space_lg);
-
 }
 
 .section_heading {
@@ -130,12 +128,15 @@ figure {
   margin-top: 0.5rem;
 }
 
+/*
+ * レスポンシブ（max-width: 768px）の並び
+ * ─ 共通 → ヘッダー → ヒーロー → Works（TOP）
+ *   → Works（詳細・一覧ワイド）→ ページヘッダー → About → Contact
+ */
 
-
-
-
-
-/* SP：セクション内側の余白を縮小 */
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ 共通 — セクション内余白・見出しサイズ
+------------------------------------------------------------- */
 @media (max-width: 768px) {
   .section_header {
     padding: var(--space_xs);
@@ -220,24 +221,12 @@ figure {
   width: 100%;
 }
 
-/* ハンバーガーボタン */
-.nav_toggle {
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-/* SP：ハンバーガーメニュー表示・ドロワーナビ */
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ ヘッダー — ハンバーガー／ドロワーナビ
+------------------------------------------------------------- */
 @media (max-width: 768px) {
   .header_inner {
     padding: 0 var(--space_sm);
-  }
-
-  .nav_toggle {
-    display: flex;
   }
 
   .global_nav {
@@ -272,12 +261,6 @@ figure {
     font-size: 1.4rem;
   }
 
-  /* ハンバーガー → ✕ アニメーション */
-  .open #navi {
-    left: 0;
-    opacity: 1;
-  }
-
   .toggle_btn {
     width: 30px;
     height: 30px;
@@ -287,9 +270,7 @@ figure {
     z-index: 20;
   }
 
-  /*
-ハンバーガーメニューの線の設定（メニューが閉じている時）
-*/
+  /* ハンバーガーメニューの線の設定（メニューが閉じている時） */
   .toggle_btn span {
     display: block;
     position: absolute;
@@ -300,31 +281,23 @@ figure {
     transition: all 0.5s;
   }
 
-  /*
-  1本目の線の位置を設定
-  */
+  /* 1本目の線の位置を設定 */
   .toggle_btn span:nth-child(1) {
     top: 10px;
   }
 
-  /*
-2本目の線の位置を設定
-*/
+  /* 2本目の線の位置を設定 */
   .toggle_btn span:nth-child(2) {
     bottom: 10px;
   }
 
-  /*
-1本目の線を-45度回転
-*/
+  /* 1本目の線を -45度回転 */
   .open .toggle_btn span:nth-child(1) {
     -webkit-transform: translateY(4px) rotate(-45deg);
     transform: translateY(4px) rotate(-45deg);
   }
 
-  /*
-2本目の線を45度回転
-*/
+  /* 2本目の線を 45度回転 */
   .open .toggle_btn span:nth-child(2) {
     -webkit-transform: translateY(-4px) rotate(45deg);
     transform: translateY(-4px) rotate(45deg);
@@ -335,9 +308,7 @@ figure {
     transition: all 0.5s;
   }
 
-  /*
-メニューを開いている時は、全体を黒背景にする
-*/
+  /* メニューを開いている時は、全体を黒背景にする */
   .open #mask {
     display: block;
     position: fixed;
@@ -382,12 +353,12 @@ figure {
 }
 
 .hero_catch_text {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: var(--font_display);
-  font-weight: 300;
+  font-weight: 900;
   letter-spacing: 0.12em;
-  color: #fff;
-  text-shadow: 0 2px 24px rgba(58, 48, 48, 0.18);
+  color: floralwhite;
+  text-shadow: 0 2px 24px rgba(58, 48, 48, 0.50);
 }
 
 .hero_catch_text_up {
@@ -442,7 +413,9 @@ figure {
   }
 }
 
-/* SP：ヒーローテキストサイズ縮小 */
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ ヒーロー — キャッチ文字サイズ
+------------------------------------------------------------- */
 @media (max-width: 768px) {
   .hero_catch_text {
     font-size: 2.2rem;
@@ -503,15 +476,6 @@ figure {
   transform: translateX(0);
 }
 
-/* SP：横スライドを抑制（画面幅が狭いと見切れるため） */
-@media (max-width: 768px) {
-
-  .works_category_left,
-  .works_category_right {
-    transform: translateX(0);
-  }
-}
-
 /* ============================================================
    Works セクション（TOP）
    ============================================================ */
@@ -539,7 +503,7 @@ figure {
   padding: 2rem;
   position: relative;
   display: inline-block;
-  text-shadow: 0 0 2px white;
+  text-shadow: 0 0 2px #fff;
 }
 
 .works_category_heading span {
@@ -547,8 +511,8 @@ figure {
   z-index: 10;
 }
 
-.works_category_heading:before {
-  content: "";
+.works_category_heading::before {
+  content: '';
   opacity: 0.5;
   position: absolute;
   background: var(--color_primary_light);
@@ -564,19 +528,15 @@ figure {
   box-shadow: 0px 0px 0px 5px var(--color_primary_light);
 }
 
-
 .works_category_heading_top a {
   display: block;
 }
 
-
-
-.works_category_heading_top:before {
-  transition:
-    transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+.works_category_heading_top::before {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.works_category_heading_top:hover:before {
+.works_category_heading_top:hover::before {
   background-color: var(--color_primary);
   transform: translate(-50%, -50%) scale(0.85);
 }
@@ -660,10 +620,14 @@ figure {
   color: var(--color_primary);
 }
 
-/* SP：1カラム */
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ Works（TOP）— 横スライド解除・1カラム
+------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .works_section {
-    padding: var(--space_lg) 0;
+
+  .works_category_left,
+  .works_category_right {
+    transform: translateX(0);
   }
 
   .works_category_heading {
@@ -696,7 +660,7 @@ figure {
   line-height: 2;
   color: var(--color_text_sub);
   background-color: var(--color_primary_pale);
-  border: var(--color_surface);
+  border: 1px solid var(--color_border);
   border-radius: 30px;
 }
 
@@ -724,11 +688,20 @@ figure {
 .works_pagination {
   display: flex;
   gap: var(--space_xl);
-  justify-content: left;
+  justify-content: flex-start;
   margin-top: var(--space_md);
 }
 
-/* SP */
+/* ============================================================
+   Works ページ：グリッド
+   ============================================================ */
+.works_grid--wide {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ Works — 詳細ページ・一覧ワイド
+------------------------------------------------------------- */
 @media (max-width: 768px) {
   .work_details {
     padding: var(--space_md);
@@ -754,21 +727,57 @@ figure {
     gap: var(--space_md);
     flex-wrap: wrap;
   }
-}
 
-/* ============================================================
-   Works ページ：グリッド
-   ============================================================ */
-.works_grid--wide {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* SP：2カラム */
-@media (max-width: 768px) {
   .works_grid--wide {
     grid-template-columns: 1fr 1fr;
     gap: var(--space_md);
     overflow: hidden;
+  }
+}
+
+/* ============================================================
+   ページヘッダー（works.html / about.html 共通）
+   ============================================================ */
+.page_hero {
+  padding: 0;
+  background: var(--color_primary_pale);
+  border-bottom: 1px solid var(--color_border);
+}
+
+.page_hero_heading {
+  font-family: var(--font_display);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--color_text);
+  position: relative;
+  padding-bottom: var(--space_xs);
+}
+
+.page_hero_heading::before {
+  content: '--------';
+  display: block;
+  font-family: var(--font_body);
+  font-size: 1.2rem;
+  color: var(--color_primary);
+  height: 1.3em;
+}
+
+.page_hero_heading::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 1px;
+  background: var(--color_primary);
+  margin-top: 0.75rem;
+}
+
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ ページヘッダー — 見出しサイズ
+------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .page_hero_heading {
+    font-size: 1.6rem;
   }
 }
 
@@ -793,7 +802,6 @@ figure {
   gap: var(--space_lg);
   align-items: start;
   margin-bottom: var(--space_xl);
-
 }
 
 .about_figure {
@@ -810,7 +818,6 @@ figure {
   object-fit: cover;
 }
 
-
 .about_profile_text .about_description {
   font-size: 1.2rem;
   line-height: 2;
@@ -821,7 +828,7 @@ figure {
 /* サブ見出し */
 .about_sub_heading {
   display: inline-block;
-  font-family: var(--font_sub);
+  font-family: var(--font_body);
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -909,7 +916,9 @@ figure {
   list-style-type: circle;
 }
 
-/* SP */
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ About — プロフィール・スキル・強み
+------------------------------------------------------------- */
 @media (max-width: 768px) {
   .about_section {
     padding: var(--space_md) 0;
@@ -977,7 +986,6 @@ figure {
   font-family: var(--font_display);
   letter-spacing: 0.2em;
 }
-
 
 .contact_body {
   max-width: 640px;
@@ -1069,7 +1077,9 @@ figure {
   transform: translateY(-1px);
 }
 
-/* SP */
+/* -------------------------------------------------------------
+   [SP] max-width: 768px ／ Contact — フォーム・余白
+------------------------------------------------------------- */
 @media (max-width: 768px) {
   .contact_section {
     padding: var(--space_lg) 0;
@@ -1087,50 +1097,6 @@ figure {
   .form_button {
     width: 100%;
     text-align: center;
-  }
-}
-
-/* ============================================================
-   ページヘッダー（works.html / about.html 共通）
-   ============================================================ */
-.page_hero {
-  padding: 0;
-  background: var(--color_primary_pale);
-  border-bottom: 1px solid var(--color_border);
-}
-
-.page_hero_heading {
-  font-family: var(--font_display);
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  color: var(--color_text);
-  position: relative;
-  padding-bottom: var(--space_xs);
-}
-
-.page_hero_heading::before {
-  content: '--------';
-  display: block;
-  font-family: var(--font_body);
-  font-size: 1.2rem;
-  color: var(--color_primary);
-  height: 1.3em;
-}
-
-.page_hero_heading::after {
-  content: '';
-  display: block;
-  width: 30%;
-  height: 1px;
-  background: var(--color_primary);
-  margin-top: 0.75rem;
-}
-
-/* SP */
-@media (max-width: 768px) {
-  .page_hero_heading {
-    font-size: 1.6rem;
   }
 }
 

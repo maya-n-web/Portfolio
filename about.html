@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maya Nishiiについて">
-  <link rel="icon" href="images/favicon.ico">
+  <meta name="description" content="Maya Nishiiについて" />
+  <link rel="icon" href="images/favicon.ico" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/
-            css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
+</head>
 
 <body>
 
@@ -71,8 +71,8 @@
       <div class="section_inner">
 
         <!-- プロフィール -->
-        <div class="about_skills" aria-labelledby="skills_heading">
-          <h2 class="about_sub_heading" id="skills_heading">プロフィール</h2>
+        <div class="about_skills" aria-labelledby="profile_heading">
+          <h2 class="about_sub_heading" id="profile_heading">プロフィール</h2>
         </div>
         <div class="about_profile">
           <figure class="about_figure">
@@ -81,18 +81,14 @@
           <div class="about_profile_text">
             <p class="about_description">
               短大卒業後、正社員として4年間接客業に従事。
-              その後カナダへ数年間移住。コロナ化での現地での生きた情報を
-              日本に発信するために開設した HP 運営をきっかけに、WEB デザ
-              インやシステム管理に興味を持つ。帰国後は Web エンジニアを目
-              指すことを決意。4 ヶ月間スクールで Web デザインやプログラミ
-              ングについて学び、現在は転職活動をしています。
+              その後カナダへ数年間移住。コロナ禍での現地での生きた情報を日本に発信するために開設した HP 運営をきっかけに、WEB デザインやシステム管理に興味を持つ。帰国後は Web エンジニアを目指すことを決意。4 ヶ月間スクールで Web デザインやプログラミングについて学び、現在は転職活動をしています。
             </p>
           </div>
         </div>
 
         <!-- できること -->
-        <div class="about_skills" aria-labelledby="skills_heading">
-          <h2 class="about_sub_heading" id="skills_heading">できること</h2>
+        <div class="about_skills" aria-labelledby="ability_heading">
+          <h2 class="about_sub_heading" id="ability_heading">できること</h2>
         </div>
 
         <section class="skills" aria-label="Skills">
@@ -174,9 +170,9 @@
                   <div class="skill-card__stars">★★★★</div>
                 </article>
                 <article class="skill-card" data-level="2" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/googleoffice-icon%201.svg" alt="Google Workplace">
+                  <div class="skill-card__icon"><img src="images/googleoffice-icon%201.svg" alt="Google Workspace">
                   </div>
-                  <div class="skill-card__name">Google Workplace</div>
+                  <div class="skill-card__name">Google Workspace</div>
                   <div class="skill-card__stars">★★★</div>
                 </article>
                 <article class="skill-card" data-level="2" data-cat="tool">
@@ -190,8 +186,8 @@
         </section>
 
         <!-- 強み -->
-        <div class="about_skills" aria-labelledby="skills_heading">
-          <h2 class="about_sub_heading" id="skills_heading">わたしの強み</h2>
+        <div class="about_skills" aria-labelledby="strength_heading">
+          <h2 class="about_sub_heading" id="strength_heading">わたしの強み</h2>
         </div>
         <div class="strength_card">
           <ul class="strength_text">
@@ -204,9 +200,9 @@
               <strong>セルフマネジメント力</strong><br>ただ指示を待つのではなく、目標達成のために自ら考え、行動を修正し続ける力があります。
               過去に正社員として勤務していました。働いていた現場では常に上司がいる環境ではなく、
               自分がその時の責任者であるタイミングも多々ありました。そのため指示待ちの姿勢ではなく常に自分でも考えて行動することができます。
+            </li>
+          </ul>
         </div>
-      </div>
-
       </div>
     </section>
 
@@ -256,11 +252,13 @@
               <button class="form_button" type="submit">送信する</button>
             </div>
           </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){ 
-    clearFormStorage(); 
-    alert('送信が完了しました'); 
-    location.reload(); 
-  }"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="
+                if (submitted) {
+                  clearFormStorage();
+                  alert('送信が完了しました');
+                  location.reload();
+                }
+              "></iframe>
         </div>
       </div>
     </section>
@@ -281,7 +279,6 @@
 
   <script src="js/jquery-3.7.1.js"></script>
   <script src="js/lightbox.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

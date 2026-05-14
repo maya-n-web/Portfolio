@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/
-      css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
 </head>
@@ -56,7 +56,8 @@
     <section class="hero_section" aria-label="ヒーローエリア">
       <div class="hero_inner">
         <figure class="hero_figure">
-          <img class="hero_image" src="images/pic_01_l.jpg" alt="ヒーローイメージ" width="1400" height="800" />
+          <video class="hero_image" src="images/topvideo.mp4" autoplay muted loop alt="ヒーローイメージ" width="1400"
+            height="900"></video>
         </figure>
         <div class="hero_catch">
           <h1 class="hero_catch_text">
@@ -80,7 +81,7 @@
           <h2 class="section_heading" id="works_heading">作ったもの</h2>
         </section>
 
-        <article class="works_category_left js-reveal" aria-labelledby="copy_works_heading">
+        <article class="works_category_left js-reveal" aria-labelledby="original_works_heading">
           <h3 class="works_category_heading_top works_category_heading" id="original_works_heading">
             <a href="works.html#jump-original"><span>オリジナル Web 制作物</span></a>
           </h3>
@@ -117,13 +118,12 @@
             <p class="about_description">
               短大卒業後、正社員として4年間接客業に従事。
               <br />
-              その後カナダへ数年間移住。コロナ化での現地での生きた情報を
-              日本に発信するために開設した HP 運営をきっかけに、WEB デザ
-              インやシステム管理に興味を持つ。
+              その後カナダへ数年間移住。コロナ禍での現地での生きた情報を日本に発信するために開設した
+              HP 運営をきっかけに、WEB デザインやシステム管理に興味を持つ。
               <br />
-              帰国後は Web エンジニアを目 指すことを決意。4 ヶ月間スクールで
-              Web デザインやプログラミ
-              ングについて学び、現在は転職活動をしています。
+              帰国後は Web エンジニアを目指すことを決意。4 ヶ月間スクールで
+              Web
+              デザインやプログラミングについて学び、現在は転職活動をしています。
             </p>
           </div>
         </div>
@@ -140,9 +140,7 @@
     <section class="contact_section" id="contact" aria-labelledby="contact_heading">
       <div class="section_inner_top">
         <section class="section_header section_header_top">
-          <h2 class="section_heading" id="contact_heading">
-            CONTACT
-          </h2>
+          <h2 class="section_heading" id="contact_heading">CONTACT</h2>
         </section>
         <div class="contact_body">
           <p class="contact_lead">
@@ -183,11 +181,15 @@
               <button class="form_button" type="submit">送信する</button>
             </div>
           </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-            onload="if (submitted) { alert('送信が完了しました'); location.reload(); }"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="
+                if (submitted) {
+                  alert('送信が完了しました');
+                  location.reload();
+                }
+              "></iframe>
         </div>
+      </div>
     </section>
-    </div>
   </main>
 
   <!-- ========================================
@@ -202,8 +204,6 @@
   </footer>
 
   <script src="js/jquery-3.7.1.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
