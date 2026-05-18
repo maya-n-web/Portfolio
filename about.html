@@ -1,285 +1,393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Maya Nishiiについて" />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maya Nishiiについて" />
-  <link rel="icon" href="images/favicon.ico" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-
-
-  <!-- ========================================
+  <body>
+    <!-- ========================================
        HEADER / NAVIGATION
   ======================================== -->
-  <header class="site_header">
-    <div class="header_inner">
-      <h2 class="site_name">
-        <a href="index.html">PORTFOLIO | MAYA NISHII</a>
-      </h2>
-      <nav class="global_nav" aria-label="グローバルナビゲーション">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a class="nav_link" href="works.html">作ったもの</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="about.html">わたしについて</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#contact">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="site_header">
+      <div class="header_inner">
+        <h2 class="site_name">
+          <a href="index.html">PORTFOLIO | MAYA NISHII</a>
+        </h2>
+        <nav class="global_nav" aria-label="グローバルナビゲーション">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a class="nav_link" href="works.html">作ったもの</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="about.html">わたしについて</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="toggle_btn">
-        <span></span>
-        <span></span>
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div id="mask"></div>
       </div>
+    </header>
 
-      <div id="mask"></div>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- ========================================
+    <main>
+      <!-- ========================================
          ページヘッダー
     ======================================== -->
-    <div class="page_hero">
-      <div class="section_inner">
-        <h1 class="page_hero_heading">わたしについて</h1>
+      <div class="page_hero">
+        <div class="section_inner">
+          <h1 class="page_hero_heading">わたしについて</h1>
+        </div>
       </div>
-    </div>
 
-    <!-- ========================================
+      <!-- ========================================
          ABOUT SECTION
     ======================================== -->
 
-
-    <section class="about_section" aria-label="プロフィール">
-      <div class="section_inner">
-
-        <!-- プロフィール -->
-        <div class="about_skills" aria-labelledby="profile_heading">
-          <h2 class="about_sub_heading" id="profile_heading">プロフィール</h2>
-        </div>
-        <div class="about_profile">
-          <figure class="about_figure">
-            <img class="about_image" src="images/profile.jpg" alt="プロフィール写真" />
-          </figure>
-          <div class="about_profile_text">
-            <p class="about_description">
-              短大卒業後、正社員として4年間接客業に従事。
-              その後カナダへ数年間移住。コロナ禍での現地での生きた情報を日本に発信するために開設した HP 運営をきっかけに、WEB デザインやシステム管理に興味を持つ。帰国後は Web エンジニアを目指すことを決意。4 ヶ月間スクールで Web デザインやプログラミングについて学び、現在は転職活動をしています。
-            </p>
+      <section class="about_section" aria-label="プロフィール">
+        <div class="section_inner">
+          <!-- プロフィール -->
+          <div class="about_skills" aria-labelledby="profile_heading">
+            <h2 class="about_sub_heading" id="profile_heading">プロフィール</h2>
           </div>
-        </div>
-
-        <!-- できること -->
-        <div class="about_skills" aria-labelledby="ability_heading">
-          <h2 class="about_sub_heading" id="ability_heading">できること</h2>
-        </div>
-
-        <section class="skills" aria-label="Skills">
-          <div class="skills-tabs">
-            <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-all" checked>
-            <label class="skills-tabs__tab" for="skills-all">ALL</label>
-
-            <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-lang">
-            <label class="skills-tabs__tab" for="skills-lang">LANG</label>
-
-            <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-fwk">
-            <label class="skills-tabs__tab" for="skills-fwk">FWK</label>
-
-            <input class="skills-tabs__radio" type="radio" name="skills-tab" id="skills-tool">
-            <label class="skills-tabs__tab" for="skills-tool">TOOL</label>
+          <div class="about_profile">
+            <figure class="about_figure">
+              <img
+                class="about_image"
+                src="images/profile.jpg"
+                alt="プロフィール写真"
+              />
+            </figure>
+            <div class="about_profile_text">
+              <p class="about_description">
+                短大卒業後、正社員として4年間接客業に従事。
+                その後カナダへ数年間移住。コロナ禍での現地での生きた情報を日本に発信するために開設した
+                HP 運営をきっかけに、WEB
+                デザインやシステム管理に興味を持つ。帰国後は Web
+                エンジニアを目指すことを決意。4 ヶ月間スクールで Web
+                デザインやプログラミングについて学び、現在は転職活動をしています。
+              </p>
+            </div>
           </div>
 
+          <!-- できること -->
+          <div class="about_skills" aria-labelledby="ability_heading">
+            <h2 class="about_sub_heading" id="ability_heading">できること</h2>
+          </div>
 
-          <div class="skills-tabs__panels">
-            <div class="skills-panel skills-panel--all">
-              <div class="skills-grid">
-                <article class="skill-card" data-level="3" data-cat="lang">
-                  <div class="skill-card__icon"><img src="images/html-icon.svg" alt="HTML"></div>
-                  <div class="skill-card__name">HTML</div>
-                  <div class="skill-card__stars">★★★★★</div>
-                </article>
+          <section class="skills" aria-label="Skills">
+            <div class="skills-tabs">
+              <input
+                class="skills-tabs__radio"
+                type="radio"
+                name="skills-tab"
+                id="skills-all"
+                checked
+              />
+              <label class="skills-tabs__tab" for="skills-all">ALL</label>
 
-                <article class="skill-card" data-level="3" data-cat="lang">
-                  <div class="skill-card__icon"><img src="images/css3%201.svg" alt="CSS"></div>
-                  <div class="skill-card__name">CSS</div>
-                  <div class="skill-card__stars">★★★★</div>
-                </article>
-                <article class="skill-card" data-level="2" data-cat="lang">
-                  <div class="skill-card__icon"><img src="images/javascript-icon%201.svg" alt="JavaScript"></div>
-                  <div class="skill-card__name">JavaScript</div>
-                  <div class="skill-card__stars">★★★</div>
-                </article>
+              <input
+                class="skills-tabs__radio"
+                type="radio"
+                name="skills-tab"
+                id="skills-lang"
+              />
+              <label class="skills-tabs__tab" for="skills-lang">LANG</label>
 
-                <article class="skill-card" data-level="2" data-cat="lang">
-                  <div class="skill-card__icon"><img src="images/php-icon%201.svg" alt="PHP"></div>
-                  <div class="skill-card__name">PHP</div>
-                  <div class="skill-card__stars">★★★★</div>
-                </article>
-                <article class="skill-card" data-level="2" data-cat="lang">
-                  <div class="skill-card__icon"><img src="images/sql-icon%201.svg" alt="SQL"></div>
-                  <div class="skill-card__name">SQL</div>
-                  <div class="skill-card__stars">★★★</div>
-                </article>
+              <input
+                class="skills-tabs__radio"
+                type="radio"
+                name="skills-tab"
+                id="skills-fwk"
+              />
+              <label class="skills-tabs__tab" for="skills-fwk">FWK</label>
 
-                <article class="skill-card" data-level="1" data-cat="fwk">
-                  <div class="skill-card__icon"><img src="images/nodejs.svg" alt="Node.js"></div>
-                  <div class="skill-card__name">Node.js</div>
-                  <div class="skill-card__stars">★★</div>
-                </article>
+              <input
+                class="skills-tabs__radio"
+                type="radio"
+                name="skills-tab"
+                id="skills-tool"
+              />
+              <label class="skills-tabs__tab" for="skills-tool">TOOL</label>
+            </div>
 
-                <article class="skill-card" data-level="3" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/github-icon%201.svg" alt="Git / GitHub"></div>
-                  <div class="skill-card__name">GitHub</div>
-                  <div class="skill-card__stars">★★★★</div>
-                </article>
-                <article class="skill-card" data-level="3" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/Figma-logo%201.svg" alt="Figma"></div>
-                  <div class="skill-card__name">Figma</div>
-                  <div class="skill-card__stars">★★★</div>
-                </article>
-                <article class="skill-card" data-level="3" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/illustrator-icon%201.svg" alt="Illustrator"></div>
-                  <div class="skill-card__name">Illustrator</div>
-                  <div class="skill-card__stars">★★★</div>
-                </article>
-                <article class="skill-card" data-level="2" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/photoshop-icon%201.svg" alt="Photoshop"></div>
-                  <div class="skill-card__name">Photoshop</div>
-                  <div class="skill-card__stars">★★★</div>
-                </article>
-                <article class="skill-card" data-level="2" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/cursor-icon%201.svg" alt="Cursor"></div>
-                  <div class="skill-card__name">Cursor</div>
-                  <div class="skill-card__stars">★★★★</div>
-                </article>
-                <article class="skill-card" data-level="2" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/googleoffice-icon%201.svg" alt="Google Workspace">
-                  </div>
-                  <div class="skill-card__name">Google Workspace</div>
-                  <div class="skill-card__stars">★★★</div>
-                </article>
-                <article class="skill-card" data-level="2" data-cat="tool">
-                  <div class="skill-card__icon"><img src="images/wps-icon%201.svg" alt="WPS"></div>
-                  <div class="skill-card__name">WPS</div>
-                  <div class="skill-card__stars">★★★★</div>
-                </article>
+            <div class="skills-tabs__panels">
+              <div class="skills-panel skills-panel--all">
+                <div class="skills-grid">
+                  <article class="skill-card" data-level="3" data-cat="lang">
+                    <div class="skill-card__icon">
+                      <img src="images/html-icon.svg" alt="HTML" />
+                    </div>
+                    <div class="skill-card__name">HTML</div>
+                    <div class="skill-card__stars">★★★★★</div>
+                  </article>
+
+                  <article class="skill-card" data-level="3" data-cat="lang">
+                    <div class="skill-card__icon">
+                      <img src="images/css3%201.svg" alt="CSS" />
+                    </div>
+                    <div class="skill-card__name">CSS</div>
+                    <div class="skill-card__stars">★★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="2" data-cat="lang">
+                    <div class="skill-card__icon">
+                      <img
+                        src="images/javascript-icon%201.svg"
+                        alt="JavaScript"
+                      />
+                    </div>
+                    <div class="skill-card__name">JavaScript</div>
+                    <div class="skill-card__stars">★★★</div>
+                  </article>
+
+                  <article class="skill-card" data-level="2" data-cat="lang">
+                    <div class="skill-card__icon">
+                      <img src="images/php-icon%201.svg" alt="PHP" />
+                    </div>
+                    <div class="skill-card__name">PHP</div>
+                    <div class="skill-card__stars">★★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="2" data-cat="lang">
+                    <div class="skill-card__icon">
+                      <img src="images/sql-icon%201.svg" alt="SQL" />
+                    </div>
+                    <div class="skill-card__name">SQL</div>
+                    <div class="skill-card__stars">★★★</div>
+                  </article>
+
+                  <article class="skill-card" data-level="1" data-cat="fwk">
+                    <div class="skill-card__icon">
+                      <img src="images/nodejs.svg" alt="Node.js" />
+                    </div>
+                    <div class="skill-card__name">Node.js</div>
+                    <div class="skill-card__stars">★★</div>
+                  </article>
+
+                  <article class="skill-card" data-level="3" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img
+                        src="images/github-icon%201.svg"
+                        alt="Git / GitHub"
+                      />
+                    </div>
+                    <div class="skill-card__name">GitHub</div>
+                    <div class="skill-card__stars">★★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="3" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img src="images/Figma-logo%201.svg" alt="Figma" />
+                    </div>
+                    <div class="skill-card__name">Figma</div>
+                    <div class="skill-card__stars">★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="3" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img
+                        src="images/illustrator-icon%201.svg"
+                        alt="Illustrator"
+                      />
+                    </div>
+                    <div class="skill-card__name">Illustrator</div>
+                    <div class="skill-card__stars">★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="2" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img
+                        src="images/photoshop-icon%201.svg"
+                        alt="Photoshop"
+                      />
+                    </div>
+                    <div class="skill-card__name">Photoshop</div>
+                    <div class="skill-card__stars">★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="2" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img src="images/cursor-icon%201.svg" alt="Cursor" />
+                    </div>
+                    <div class="skill-card__name">Cursor</div>
+                    <div class="skill-card__stars">★★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="2" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img
+                        src="images/googleoffice-icon%201.svg"
+                        alt="Google Workspace"
+                      />
+                    </div>
+                    <div class="skill-card__name">Google Workspace</div>
+                    <div class="skill-card__stars">★★★</div>
+                  </article>
+                  <article class="skill-card" data-level="2" data-cat="tool">
+                    <div class="skill-card__icon">
+                      <img src="images/wps-icon%201.svg" alt="WPS" />
+                    </div>
+                    <div class="skill-card__name">WPS</div>
+                    <div class="skill-card__stars">★★★★</div>
+                  </article>
+                </div>
               </div>
             </div>
+          </section>
+
+          <!-- 強み -->
+          <div class="about_skills" aria-labelledby="strength_heading">
+            <h2 class="about_sub_heading" id="strength_heading">
+              わたしの強み
+            </h2>
           </div>
-        </section>
+          <div class="strength_card">
+            <ul class="strength_text">
+              <li>
+                <strong>論理的思考</strong>
+                <br />
+                問題に対して物事を分解し、解決のために筋道を立てて整理する力があります。
+                ”とりあえず”の判断ではなく、しっかり根拠をもって判断するために物事を分析して判断し行動に移します。
+              </li>
 
-        <!-- 強み -->
-        <div class="about_skills" aria-labelledby="strength_heading">
-          <h2 class="about_sub_heading" id="strength_heading">わたしの強み</h2>
+              <li>
+                <strong>セルフマネジメント力</strong>
+                <br />
+                ただ指示を待つのではなく、目標達成のために自ら考え、行動を修正し続ける力があります。
+                過去に正社員として勤務していました。働いていた現場では常に上司がいる環境ではなく、
+                自分がその時の責任者であるタイミングも多々ありました。そのため指示待ちの姿勢ではなく常に自分でも考えて行動することができます。
+              </li>
+
+              <li>
+                <strong>高い柔軟性と英語対応力</strong>
+                <br />
+                これまで多様なバックグラウンドを持つのメンバーと働いてきた経験から、文化や価値観の異なる相手とも円滑に業務を進める力を培いました。
+                いままでの常識や過去の経験とは異なる環境や状況にも柔軟に対応することができます。また、英語での実務コミュニケーションにも対応可能です。
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="strength_card">
-          <ul class="strength_text">
-            <li>
-              <strong>論理的思考</strong><br>問題に対して物事を分解し、解決のために筋道を立てて整理する力があります。
-              ”とりあえず”の判断ではなく、しっかり根拠をもって判断するために物事を分析して判断し行動に移します。
-            </li>
+      </section>
 
-            <li>
-              <strong>セルフマネジメント力</strong><br>ただ指示を待つのではなく、目標達成のために自ら考え、行動を修正し続ける力があります。
-              過去に正社員として勤務していました。働いていた現場では常に上司がいる環境ではなく、
-              自分がその時の責任者であるタイミングも多々ありました。そのため指示待ちの姿勢ではなく常に自分でも考えて行動することができます。
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- ========================================
+      <!-- ========================================
          CONTACT SECTION
     ======================================== -->
-    <section class="contact_section" id="contact" aria-labelledby="contact_heading">
-      <div class="section_inner_top">
-        <section class="section_header section_header_top">
-          <h2 class="section_heading" id="contact_heading">
-            CONTACT
-          </h2>
-        </section>
-        <div class="contact_body">
-          <p class="contact_lead">
-            お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。
-          </p>
+      <section
+        class="contact_section"
+        id="contact"
+        aria-labelledby="contact_heading"
+      >
+        <div class="section_inner_top">
+          <section class="section_header section_header_top">
+            <h2 class="section_heading" id="contact_heading">CONTACT</h2>
+          </section>
+          <div class="contact_body">
+            <p class="contact_lead">
+              お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。
+            </p>
 
-          <form id="g-form" class="contact_form"
-            action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
-            method="post" target="hidden_iframe">
+            <form
+              id="g-form"
+              class="contact_form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScDXwPFyIaxGAS4emq_WGZdihEaA-7MEzaaNlccdq9YaucscA/formResponse"
+              method="post"
+              target="hidden_iframe"
+            >
+              <div class="form_group">
+                <label class="form_label" for="contact_name">
+                  お名前
+                  <span class="form_required" aria-label="必須">*</span>
+                </label>
+                <input
+                  class="form_input"
+                  type="text"
+                  id="contact_name"
+                  name="entry.1020937472"
+                  required
+                  placeholder="山田 太郎"
+                />
+              </div>
 
-            <div class="form_group">
-              <label class="form_label" for="contact_name">お名前 <span class="form_required"
-                  aria-label="必須">*</span></label>
-              <input class="form_input" type="text" id="contact_name" name="entry.1020937472" required
-                placeholder="山田 太郎" />
-            </div>
+              <div class="form_group">
+                <label class="form_label" for="contact_email">
+                  メールアドレス
+                  <span class="form_required" aria-label="必須">*</span>
+                </label>
+                <input
+                  class="form_input"
+                  type="email"
+                  id="contact_email"
+                  name="entry.664999081"
+                  required
+                  placeholder="example@mail.com"
+                />
+              </div>
 
-            <div class="form_group">
-              <label class="form_label" for="contact_email">メールアドレス <span class="form_required"
-                  aria-label="必須">*</span></label>
-              <input class="form_input" type="email" id="contact_email" name="entry.664999081" required
-                placeholder="example@mail.com" />
-            </div>
+              <div class="form_group">
+                <label class="form_label" for="contact_message">
+                  メッセージ
+                  <span class="form_required" aria-label="必須">*</span>
+                </label>
+                <textarea
+                  class="form_textarea"
+                  id="contact_message"
+                  name="entry.1720009579"
+                  rows="6"
+                  required
+                  placeholder="お気軽にご記入ください…"
+                ></textarea>
+              </div>
 
-            <div class="form_group">
-              <label class="form_label" for="contact_message">メッセージ <span class="form_required"
-                  aria-label="必須">*</span></label>
-              <textarea class="form_textarea" id="contact_message" name="entry.1720009579" rows="6" required
-                placeholder="お気軽にご記入ください…"></textarea>
-            </div>
-
-            <div class="form_submit">
-              <button class="form_button" type="submit">送信する</button>
-            </div>
-          </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="
+              <div class="form_submit">
+                <button class="form_button" type="submit">送信する</button>
+              </div>
+            </form>
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              style="display: none"
+              onload="
                 if (submitted) {
                   clearFormStorage();
                   alert('送信が完了しました');
                   location.reload();
                 }
-              "></iframe>
+              "
+            ></iframe>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-
-  </main>
-
-  <!-- ========================================
+    <!-- ========================================
        FOOTER
   ======================================== -->
-  <footer class="site_footer">
-    <div class="footer_inner">
-      <small class="footer_copy">
-        &copy; 2026. Maya Nishii All rights reserved.
-      </small>
-    </div>
-  </footer>
+    <footer class="site_footer">
+      <div class="footer_inner">
+        <small class="footer_copy">
+          &copy; 2026. Maya Nishii All rights reserved.
+        </small>
+      </div>
+    </footer>
 
-  <script src="js/jquery-3.7.1.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
